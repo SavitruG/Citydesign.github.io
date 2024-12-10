@@ -3,46 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Course Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to My World</h1>
-        <p>A glimpse into my digital journey.</p>
+        <div class="container">
+            <h1>My Learning Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About the Course</a></li>
+                    <li><a href="#skills">Skills Learned</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a passionate [Your Profession] with a love for [Your Interests].</p>
-            <p>I'm always eager to learn and explore new technologies.</p>
-        </section>
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to My Learning Journey</h2>
+            <p>I'm currently learning <strong>Your Course Name</strong> and expanding my knowledge to build amazing projects.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <p>Check out some of my recent projects:</p>
-            <ul>
-                <li><a href="#">Project 1</a></li>
-                <li><a href="#">Project 2</a></li>
-                <li><a href="#">Project 3</a></li>
+    <section id="about">
+        <div class="container">
+            <h2>About the Course</h2>
+            <p>This course focuses on <em>brief description of the course</em>. Through this learning process, I am gaining practical skills and knowledge in areas such as <strong>specific technologies or concepts</strong>.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills I'm Developing</h2>
+            <ul class="skills-list">
+                <li>HTML5 & CSS3</li>
+                <li>Responsive Web Design</li>
+                <li>JavaScript Fundamentals</li>
+                <li>Project Management</li>
+                <li>Version Control (Git)</li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Let's connect!</p>
-            <p>Email: your_email@example.com</p>
-            <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
-            <p>GitHub: <a href="#">Your GitHub Profile</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Your Name</p>
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 Your Name | Contact: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        </div>
     </footer>
 </body>
 </html>
