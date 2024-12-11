@@ -11,64 +11,6 @@ header {
   background-color: #333;
   color: #fff;
   padding: 20px;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-main {
-  padding: 20px;
-}
-
-main h2 {
-  margin-top: 0;
-}
-
-main section {
-  margin-bottom: 20px;
-}
-
-main ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-/* style.css */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
   text-align: center; /* Center the header title */
 }
 
