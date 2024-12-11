@@ -3,56 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Your Name | Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Basic CSS for quick styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            margin: 1em 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 2em;
+            background-color: #fff;
+            margin: 1em auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Design and Analysiss of Algorithms</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About the Course</a></li>
-                    <li><a href="#skills">Skills Learned</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Your Name</h1>
+        <p>Computer Science Engineer | Tabla Artist | Aspiring Entrepreneur</p>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Welcome to My Learning Journey</h2>
-            <p></p>
-            <a href="#about" class="btn">Learn More</a>
-        </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="intro">
+        <h2>Welcome to My Portfolio!</h2>
+        <p>
+            Hi, I'm <strong>Your Name</strong>, a passionate computer science engineering student, tabla artist, and future entrepreneur. Explore my work, skills, and projects!
+        </p>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About the Course</h2>
-            <p>This course focuses on <em>brief description of the course</em>. Through this learning process, I am gaining practical skills and knowledge in areas such as <strong>specific technologies or concepts</strong>.</p>
-        </div>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a 20-year-old computer science engineering student based in India. I aim to achieve financial freedom, travel the world, and lead my own company. I am also passionate about music and performing on prestigious stages as a tabla artist.
+            </p>
+        </section>
+    </div>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills I'm Developing</h2>
-            <ul class="skills-list">
-                <li>HTML5 & CSS3</li>
-                <li>Responsive Web Design</li>
-                <li>JavaScript Fundamentals</li>
-                <li>Project Management</li>
-                <li>Version Control (Git)</li>
-            </ul>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2024 Your Name | Contact: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        </div>
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
+
