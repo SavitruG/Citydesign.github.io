@@ -1,13 +1,20 @@
+/* style.css */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;
 }
 
 header {
   background-color: #333;
   color: #fff;
   padding: 20px;
+}
+
+header h1 {
+  margin: 0;
 }
 
 nav ul {
@@ -25,26 +32,27 @@ nav a {
   color: #fff;
   text-decoration: none;
 }
-main section {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+main {
+  padding: 20px;
 }
 
 main h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  margin-top: 0;
 }
 
-main p {
-    font-size: 16px;
-    line-height: 1.5;
+main section {
+  margin-bottom: 20px;
 }
 
 main ul {
-    list-style-type: disc;
-    padding-left: 20px;
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
-/* Add more CSS rules to style other elements like the main content and footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
