@@ -1,24 +1,25 @@
 /* style.css */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Garamond', sans-serif; /* A modern, clean font */
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #222; /* Dark background */
+  color: #fff; /* Light text color */
 }
 
 header {
   background-color: #333;
   color: #fff;
   padding: 20px;
-  text-align: center; /* Center the header title */
+  text-align: center;
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center; /* Center the navigation links */
+  text-align: center;
 }
 
 nav li {
@@ -33,10 +34,12 @@ nav a {
 
 main {
   padding: 20px;
+  text-align: justify; /* Justify text for better readability */
 }
 
 main h2 {
-  text-align: left; /* Center the section titles */
+  text-align: center;
+  color: #f0f0f0; /* Lighter heading color */
 }
 
 main section {
