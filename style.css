@@ -25,5 +25,26 @@ nav a {
   color: #fff;
   text-decoration: none;
 }
+main section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+main h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+main ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
 
 /* Add more CSS rules to style other elements like the main content and footer */
