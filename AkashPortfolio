@@ -1,0 +1,240 @@
+Where to upload this code 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Design Principles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ff6347; /* Tomato color for main title */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #1e3d58; /* Dark blue for section titles */
+            margin-top: 40px;
+            border-bottom: 3px solid #ff6347; /* Tomato underline */
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 22px;
+            color: #555;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        p, ul, table {
+            margin: 20px;
+            padding: 10px;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #ffedd5; /* Light peach background */
+            font-weight: 600;
+            color: #1e3d58; /* Dark blue text */
+        }
+
+        table td {
+            background-color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #ffe6e6; /* Light red hover effect */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li:hover {
+            background-color: #ffedd5; /* Light peach background on hover */
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #ff6347; /* Tomato color */
+            border-bottom: 2px solid #ff6347;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h1>Algorithm Design Principles</h1>
+
+        <section>
+            <h2 class="section-title">1. Kinds of Problems in Nature</h2>
+            <p class="section-content">Iteration, recursion, and backtracking are natural problem-solving techniques found in nature, such as animal migration patterns or Fibonacci sequences in plants.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">2. Space and Time Efficiency</h2>
+            <p class="section-content">Understanding time and space complexities (like O(1), O(n), O(log n)) helps in optimizing algorithms, ensuring that both time and memory are used efficiently.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">3. Takeaways from Different Design Principles</h2>
+            <p class="section-content">Decomposition, pattern recognition, abstraction, pruning, and other principles allow us to break down complex problems and design algorithms efficiently.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">4. Hierarchical Data and Tree Structures</h2>
+            <p class="section-content">Tree structures such as binary search trees, AVL trees, and heaps are essential for organizing hierarchical data efficiently.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">5. Need for Array Query Algorithms</h2>
+            <p class="section-content">Array query algorithms such as segment trees, Fenwick trees, and sparse tables allow for efficient range queries and updates in large datasets.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">6. Tree vs Graph Traversals</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Tree</th>
+                        <th>Graph</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Structure</td>
+                        <td>Hierarchical, one root, no cycles</td>
+                        <td>Collection of nodes with edges, may have cycles</td>
+                    </tr>
+                    <tr>
+                        <td>Edges</td>
+                        <td>Directed (parent-child)</td>
+                        <td>Directed/Undirected</td>
+                    </tr>
+                    <tr>
+                        <td>Traversal</td>
+                        <td>Preorder, Inorder, Postorder</td>
+                        <td>BFS, DFS</td>
+                    </tr>
+                    <tr>
+                        <td>Cycle Detection</td>
+                        <td>No cycles</td>
+                        <td>Can contain cycles</td>
+                    </tr>
+                    <tr>
+                        <td>Applications</td>
+                        <td>File systems, expression trees</td>
+                        <td>Social networks, network routing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="section-title">7. Sorting and Searching Algorithms</h2>
+            <ul>
+                <li><strong>Bubble Sort:</strong> Simple but inefficient for large datasets.</li>
+                <li><strong>Selection Sort:</strong> Efficient for small datasets but poor for larger ones.</li>
+                <li><strong>Insertion Sort:</strong> Best for nearly sorted data.</li>
+                <li><strong>Merge Sort:</strong> Efficient and stable sorting algorithm.</li>
+                <li><strong>Quick Sort:</strong> Faster than merge sort in practice.</li>
+                <li><strong>Heap Sort:</strong> Efficient for priority queues and in-place sorting.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">8. Importance of Graph Algorithms</h2>
+            <p class="section-content"><strong>Spanning Trees:</strong> Connect all points with the least number of edges, ensuring efficiency in network design.</p>
+            <p><strong>Prim’s Algorithm:</strong> Efficient network expansion by adding the least expensive edges.</p>
+            <p><strong>Kruskal’s Algorithm:</strong> Connects sparse networks without forming cycles.</p>
+            <p><strong>Shortest Path Algorithms:</strong> Dijkstra’s, Bellman-Ford, and Floyd-Warshall help us find the shortest or cheapest route between points.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">9. Algorithm Design Techniques</h2>
+            <p class="section-content">Different approaches for problem-solving include Divide and Conquer, Dynamic Programming, Greedy Algorithms, and more to optimize performance.</p>
+            <ul>
+                <li><strong>Divide and Conquer:</strong> Splits the problem into smaller subproblems.</li>
+                <li><strong>Dynamic Programming:</strong> Solves overlapping subproblems efficiently.</li>
+                <li><strong>Greedy Algorithms:</strong> Makes the best local choice at each step.</li>
+                <li><strong>Backtracking:</strong> Explores and undoes choices to find valid solutions.</li>
+                <li><strong>Branch-and-Bound:</strong> Explores solutions and eliminates non-optimal paths.</li>
+                <li><strong>Randomized Algorithms:</strong> Uses randomness to simplify solutions.</li>
+                <li><strong>Heuristic and Approximation:</strong> Aims for "good enough" solutions.</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
