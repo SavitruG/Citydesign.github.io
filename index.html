@@ -1,66 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Introduction</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        @font-face {
+            font-family: 'Product Sans';
+            src: url('https://fonts.gstatic.com/s/productsans/v1/ProductSans-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Product Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #004080;
+        }
+        .member-section {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #ffffff;
+            transition: background-color 0.3s;
+        }
+        .member-section:hover {
+            background-color: #d9f1ff;
+        }
+        .links {
+            margin-top: 10px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 5px 10px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .links a:hover {
+            background-color: #0066cc;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Design and Analysis of Algorithms</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>What this course is about?</h2>
-    <p>The "Design and Analysis of Algorithms" course delves into the foundational principles of computational problem-solving, emphasizing both theoretical and practical aspects.</p>
-    <p>It explores structural data management through trees and graphs, enabling efficient organization and traversal of data.</p>
-    <p>The course also covers essential sorting and searching algorithms, ensuring optimal data manipulation and retrieval.</p>
-    <p>By connecting each concept to real-world applications, it illustrates the relevance of algorithms in fields such as network optimization, database management, and artificial intelligence.</p>
-    <p>This hands-on approach equips learners with the skills to design efficient algorithms and critically analyze their performance, fostering innovative problem-solving capabilities.</p>
+    <header>
+        <h1>Design and Analysis of Algorithms</h1>
+        <p>Welcome to our project portfolio! Embark on a journey with us  where we explore the world of algorithms </p>
+    </header>
 
-    <h2>Key Topics Covered:</h2>
-    <ul>
-      <li>Algorithm analysis and complexity theory</li>
-      <li>Divide and conquer algorithms</li>
-      <li>Greedy algorithms</li>
-      <li>Dynamic programming</li>
-      <li>Graph algorithms</li>
-      <li>Backtracking and branch-and-bound</li>
-    </ul>
+    <section>
+        <h2>About</h2>
+        <p>This project focuses on delivering a detailed insight into our course objectives, reflections, and technical implementations. Explore the different sections below to know more.</p>
+    </section>
 
-    <h2>Data Structures and Algorithms Studied</h2>
-    <h3>Math Basics</h3>
-    <p>
-      - We started by understanding fundamental math concepts, critical for this course. 
-      - This included calculating time and space efficiency for solutions and recurrence relations.
-      - Examples included solving problems like Tower of Brahma and the n-queens problem.
-    </p>
+    <section>
+      <h2>Our team</h2>
+        <div class="member-section">
+            <p><strong>Abhinandan N M</strong></p>
+            <div class="links">
+                <a href="course_reflection1.html">Course Reflection</a>
+                <a href="github1.html">Github</a>
+                <a href="business_case1.html">Business Case</a>
+            </div>
+        </div>
+    </section>
 
-    <h3>Math Foundations</h3>
-    <p>
-      - We then discussed math foundations, including orders of growth.
-      - Using orders of growth, we analyzed the efficiency of solutions in more detail.
-    </p>
+    <section>
+        <div class="member-section">
+            <p><strong>Akash Hiremath </strong></p>
+            <div class="links">
+                <a href="course_reflection2.html">Course Reflection</a>
+                <a href="github2.html">Github</a>
+                <a href="business_case2.html">Business Case</a>
+            </div>
+        </div>
+    </section>
 
-    <h3>Structured Data Management</h3>
-    <p>
-      - We explored different data structures for efficient organization and retrieval.
-      - We started with n-ary trees, focusing on binary trees.
-    </p>
+    <section>
+        <div class="member-section">
+            <p><strong>Kushal Koujalagi</strong></p>
+            <div class="links">
+                <a href="course_reflection3.html">Course Reflection</a>
+                <a href="github3.html">Github</a>
+                <a href="business_case3.html">Business Case</a>
+            </div>
+        </div>
+    </section>
 
-    <p>From binary trees, we learned searching algorithms leading to binary search trees.</p>
-    <p>We explored various tree structures like 2-3 trees, AVL trees, and Red-Black trees, each with its strengths in terms of efficiency for insertion and deletion.</p>
-
-    <p>Other structures covered include Tries (efficient for searching based on prefixes), Skip Lists (fast insertion), and Fenwick Trees (efficient point updates and range queries).</p>
-    <p>Heaps were introduced for efficient priority queuing, along with their associated algorithms.</p>
-    <p>Finally, we learned about Breadth-First Search (BFS) and Depth-First Search (DFS), fundamental algorithms for graph traversal.</p>
-  </main>
-  <
+    <section>
+        <div class="member-section">
+            <p><strong>Savitru Gadagkar</strong></p>
+            <div class="links">
+                <a href="course_reflection4.html">Course Reflection</a>
+                <a href="github4.html">Github</a>
+                <a href="business_case4.html">Business Case</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
