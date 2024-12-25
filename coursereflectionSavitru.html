@@ -10,18 +10,43 @@
             margin: 0;
             padding: 0;
             background-color: #e6f7ff;
+            line-height: 1.6;
         }
         header {
             background-color: #004080;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 20px 10px;
         }
         section {
-            margin: 20px;
+            margin: 20px auto;
             padding: 20px;
+            max-width: 800px;
             background-color: #ffffff;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #004080;
+        }
+        ul {
+            margin: 10px 0 10px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        strong {
+            color: #004080;
+        }
+        @media (max-width: 600px) {
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -30,9 +55,97 @@
         <h1>Course Reflection</h1>
         <p>By Savitru Gadagkar</p>
     </header>
+
     <section>
-        <h2>Reflection</h2>
-        <p>This section contains the course reflection details of Savitru Gadagkar.</p>
+        <h2>1. What are the kinds of problems we see in nature? (Iteration, Recursion, Backtracking)</h2>
+
+        <p><strong>Iteration in Nature</strong></p>
+        <p>Iteration refers to repeating a process or sequence of steps until a goal is achieved. In nature, we see iteration in several ways:</p>
+        <ul>
+            <li><strong>Animal Migration:</strong> Birds, fish, and mammals follow repetitive paths during seasonal migrations, repeating the same steps until they reach their destination.</li>
+            <li><strong>Tree Growth:</strong> Trees add one growth ring each year in a repetitive pattern, continuing this process over many years.</li>
+            <li><strong>Foraging Behavior:</strong> Ants and bees use repetitive searching patterns to find food, continuing their efforts until they succeed.</li>
+            <li><strong>Heartbeat and Breathing:</strong> The processes of heartbeat and breathing repeat continuously to sustain life.</li>
+        </ul>
+
+        <p><strong>Recursion in Nature</strong></p>
+        <p>Recursion involves self-similar structures or behaviors where a process repeats at smaller scales. Examples of recursion in nature include:</p>
+        <ul>
+            <li><strong>Tree Branching:</strong> The way trees and plants grow with smaller branches resembling the larger ones, following a recursive pattern.</li>
+            <li><strong>Snowflakes:</strong> Snowflakes form symmetrical, self-similar patterns at different levels, displaying recursion.</li>
+            <li><strong>Food Chains:</strong> In ecosystems, the relationship between predator and prey repeats in a self-similar manner, with smaller organisms playing roles similar to larger ones.</li>
+            <li><strong>Spirals in Shells and Galaxies:</strong> Many natural spirals, such as those in nautilus shells or galaxies, exhibit recursive structures.</li>
+        </ul>
+
+        <p><strong>Backtracking in Nature</strong></p>
+        <p>Backtracking is the process of exploring paths and retracing steps when one route fails. Examples in nature include:</p>
+        <ul>
+            <li><strong>Ant Foraging:</strong> Ants backtrack when they reach a dead-end, retracing their steps to try another path in their search for food.</li>
+            <li><strong>Predator Hunting:</strong> Predators like big cats may backtrack during hunting, trying different approaches when an initial strategy fails.</li>
+            <li><strong>Bees Searching for Nectar:</strong> Bees backtrack to previous flowers when they don’t find nectar at a new one.</li>
+            <li><strong>Maze Navigation by Rats:</strong> Rats exhibit backtracking in mazes, retracing their steps to find an alternative path when they hit a dead-end.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. What is space and time efficiency? Why are they important?</h2>
+        <p><strong>Time Efficiency</strong> refers to how quickly an algorithm executes relative to the size of the input. It’s measured by time complexity (e.g., O(n), O(log n)) and is crucial for:</p>
+        <ul>
+            <li><strong>Speed:</strong> Faster execution, improving user experience.</li>
+            <li><strong>Scalability:</strong> Handling larger datasets without slowing down.</li>
+            <li><strong>System Load:</strong> Reducing processor strain.</li>
+        </ul>
+        <p><strong>Space Efficiency</strong> refers to how much memory an algorithm uses relative to the input size. It’s measured by space complexity and is important for:</p>
+        <ul>
+            <li><strong>Memory Usage:</strong> Running on systems with limited resources (e.g., mobile devices).</li>
+            <li><strong>Cost:</strong> Reducing memory usage to save on cloud or server costs.</li>
+            <li><strong>Concurrency:</strong> Enabling more tasks to run simultaneously.</li>
+        </ul>
+        <p><strong>Why They Matter:</strong></p>
+        <ul>
+            <li><strong>Optimized Resource Use:</strong> Efficient algorithms make better use of time and memory, ensuring smooth performance.</li>
+            <li><strong>Real-World Constraints:</strong> Vital in environments with limited resources (e.g., mobile apps, embedded systems).</li>
+            <li><strong>Improved Performance:</strong> Balancing both optimizes overall system performance, making algorithms scalable and practical.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Orders of Growth</h2>
+        <p>Here’s a list of common orders of growth with an example for each:</p>
+        <ul>
+            <li><strong>O(1) - Constant time:</strong> Array element access</li>
+            <li><strong>O(log n) - Logarithmic time:</strong> Binary search</li>
+            <li><strong>O(n) - Linear time:</strong> Finding maximum in an unsorted array</li>
+            <li><strong>O(n log n) - Log-linear time:</strong> MergeSort, QuickSort</li>
+            <li><strong>O(n²) - Quadratic time:</strong> BubbleSort, InsertionSort</li>
+            <li><strong>O(n³) - Cubic time:</strong> Naive matrix multiplication</li>
+            <li><strong>O(2^n) - Exponential time:</strong> Brute force solution for Traveling Salesman Problem (TSP)</li>
+            <li><strong>O(n!) - Factorial time:</strong> Generating all permutations of a set</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Take Away from Different Design Principles</h2>
+        <p><strong>Decomposition:</strong> Break complex problems into smaller, manageable sub-problems for effective solutions.</p>
+        <p><strong>Pattern Recognition:</strong> Identify recurring patterns to generalize solutions across domains.</p>
+        <p><strong>Abstraction:</strong> Simplify complex systems by focusing on essential features.</p>
+        <p><strong>Pruning:</strong> Eliminate unnecessary parts to improve efficiency and save resources.</p>
+        <p><strong>Lazy Propagation:</strong> Optimize computations by deferring updates and applying them only when necessary.</p>
+    </section>
+
+    <section>
+        <h2>5. Hierarchical Data</h2>
+        <p>Hierarchical data refers to data structured in a tree-like format, where elements are related in parent-child relationships, much like an organizational chart or file system. This structure is essential for efficient navigation and organization.</p>
+    </section>
+
+    <section>
+        <h2>6. Improvements</h2>
+        <p>Suggest areas where the course could be improved.</p>
+    </section>
+
+    <section>
+        <h2>7. Final Thoughts</h2>
+        <p>Share your concluding thoughts and overall takeaways from the course.</p>
     </section>
 </body>
 </html>
