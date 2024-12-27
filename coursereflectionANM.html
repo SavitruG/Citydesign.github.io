@@ -3,36 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Reflection - Abhinandan N M</title>
+    <title>Abhinandan's Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Product Sans', Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #e6f7ff;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            color: #f4f7fc;
+            line-height: 1.6;
+        }
+
         header {
-            background-color: #004080;
-            color: white;
+            background-color: #f5deb3;  /* Beige background for header */
+            color: #333;
+            padding: 40px 20px;
             text-align: center;
-            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 500;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
         section {
-            margin: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
             padding: 20px;
-            background-color: #ffffff;
+            background: #1a1a1a;
             border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2, h3 {
+            color: #f5deb3;  /* Beige color for section titles */
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        footer {
+            background-color: #f5deb3;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Simplified question titles in reflections section */
+        .question-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #f5deb3;
+        }
+
+        .question-answer {
+            margin-bottom: 25px;
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 15px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1rem;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Course Reflection</h1>
-        <p>By Abhinandan N M</p>
+        <h1>Welcome to Abhinandan's Webpage</h1>
+        <h2>Learning and Innovating</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#reflections">Reflections</a>
+            <a href="#business-case-study">Business Case Study</a>
+            <a href="#sdg">SDG</a>
+        </nav>
     </header>
-    <section>
-        <h2>Reflection</h2>
-        <p>This section contains the course reflection details of Abhinandan N M.</p>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div>
+            <p><strong>USN:</strong> 01FE23BCS079</p>
+            <p><strong>DIVISION:</strong> C</p>
+            <p><strong>ROLL:</strong> 304</p>
+        </div>
+
+        <h2>Introduction</h2>
+        <p>
+            Data Structures and Algorithms (DSA) form the backbone of Computer Science, enabling efficient data organization and manipulation. Algorithms provide the means to solve computational problems systematically, while data structures optimize the storage and retrieval of information. As a university student, understanding these concepts equips us with the tools to tackle real-world challenges and drive innovation in technology. Mastery of DSA not only improves problem-solving skills but also lays the foundation for advanced topics like artificial intelligence, cryptography, and big data analytics.
+        </p>
     </section>
+
+    <!-- Reflections Section -->
+    <section id="reflections">
+        <h2>Reflections</h2>
+        <article>
+            <div class="question-answer">
+                <p class="question-title">What are the kinds of problems we see in nature?</p>
+                <p>Problems in nature can often be categorized based on their solution approaches: iteration, recursion, and backtracking.</p>
+            </div>
+
+            <div class="question-answer">
+                <p class="question-title">What is space and time efficiency? Why are they important?</p>
+                <p>Space and time efficiency measure how effectively an algorithm uses memory and time, respectively. These are critical for developing scalable solutions.</p>
+            </div>
+
+            <div class="question-answer">
+                <p class="question-title">Takeaway from different design principles from Chapter 2</p>
+                <p>Chapter 2 highlights the importance of modular design, divide-and-conquer strategies, and optimization techniques.</p>
+            </div>
+
+            <div class="question-answer">
+                <p class="question-title">The hierarchical data and how different tree data structures solve problems</p>
+                <p>Hierarchical data is efficiently managed by trees like binary search trees (BST), AVL trees, and red-black trees.</p>
+            </div>
+
+            <div class="question-answer">
+                <p class="question-title">The need for array query algorithms and their implications</p>
+                <p>Array query algorithms like segment trees and Fenwick trees address problems requiring efficient range queries and updates.</p>
+            </div>
+
+            <div class="question-answer">
+                <p class="question-title">Differentiate between trees and graphs and their traversals</p>
+                <p>Trees are hierarchical structures, while graphs are network structures. Traversals like DFS and BFS are used in both.</p>
+            </div>
+
+            <div class="question-answer">
+                <p class="question-title">Deliberate on sorting and searching algorithms</p>
+                <p>Sorting algorithms organize data, while searching algorithms retrieve specific elements. These underpin many applications like search engines.</p>
+            </div>
+
+            <div class="question-answer">
+                <p class="question-title">The importance of graph algorithms</p>
+                <p>Graph algorithms are crucial for optimizing networks, from transportation to communication systems.</p>
+            </div>
+
+            <div class="question-answer">
+                <p class="question-title">Different studied algorithm design techniques</p>
+                <p>Design techniques like greedy algorithms, dynamic programming, and divide-and-conquer enable systematic problem-solving.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Business Case Study Section -->
+    <section id="business-case-study">
+        <h2>Business Case Study</h2>
+
+        <h3>Power Generation in a Smart City</h3>
+        <p>Smart power generation involves innovative technologies to meet energy demands sustainably and efficiently.</p>
+        <ul>
+            <li><strong>Renewable Energy Integration:</strong> Focus on solar, wind, and other renewable energy sources to reduce dependency on fossil fuels.</li>
+            <li><strong>Decentralized Power Plants:</strong> Encouraging microgrids and community power plants to minimize energy transmission losses.</li>
+            <li><strong>Green Energy Incentives:</strong> Promotion of clean energy production with tax benefits and subsidies for green energy initiatives.</li>
+            <li><strong>AI-Driven Energy Management:</strong> Leveraging AI to predict energy demand, optimize generation, and reduce waste.</li>
+        </ul>
+
+        <h3>Fuel Industry in a Smart City</h3>
+        <p>Smart fuel industries emphasize innovation in fuel production, distribution, and consumption with an eco-friendly approach.</p>
+        <ul>
+            <li><strong>Biofuels and Green Hydrogen:</strong> Transition to cleaner fuels like biofuels and hydrogen to minimize carbon emissions.</li>
+            <li><strong>Smart Fuel Stations:</strong> Integration of traditional fuel stations with EV charging infrastructure for hybrid solutions.</li>
+            <li><strong>Emission Monitoring Systems:</strong> Advanced systems to track and reduce emissions from fuel production and consumption.</li>
+            <li><strong>Energy Recovery Systems:</strong> Technology to recover energy from industrial processes and convert it into usable forms.</li>
+        </ul>
+    </section>
+
+    <!-- SDG Section -->
+    <section id="sdg">
+        <h2>Sustainable Development Goals (SDGs)</h2>
+
+        <h3>SDG 7: Affordable and Clean Energy</h3>
+        <p>Ensure access to affordable, reliable, sustainable, and modern energy for all.</p>
+        <ul>
+            <li><strong>Target 7.1:</strong> By 2030, ensure universal access to affordable, reliable, and modern energy services.</li>
+            <li><strong>Target 7.2:</strong> By 2030, increase the share of renewable energy in the global energy mix.</li>
+            <li><strong>Target 7.3:</strong> By 2030, double the global rate of improvement in energy efficiency.</li>
+        </ul>
+
+        <h3>SDG 9: Industry, Innovation, and Infrastructure</h3>
+        <p>Build resilient infrastructure, promote inclusive and sustainable industrialization, and foster innovation.</p>
+        <ul>
+            <li><strong>Target 9.1:</strong> Develop quality, reliable, sustainable, and resilient infrastructure to support economic development.</li>
+            <li><strong>Target 9.4:</strong> By 2030, upgrade infrastructure and retrofit industries to make them sustainable.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Abhinandan N M</p>
+    </footer>
 </body>
 </html>
