@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hash Table Code</title>
+    <title>Hash Table Code in C++</title>
     <style>
         body {
             font-family: 'Product Sans', Arial, sans-serif;
@@ -43,68 +43,71 @@
 <body>
 
 <header>
-    <h1>Hash Table Code</h1>
+    <h1>Hash Table Code in C++</h1>
 </header>
 
 <main>
-    <h2>Hash Table Implementation in JavaScript</h2>
+    <h2>Hash Table Implementation in C++</h2>
     <pre>
+#include &lt;iostream&gt;
+#include &lt;list&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
 class HashTable {
-    constructor(size) {
-        this.table = new Array(size);
-    }
+private:
+    static const int tableSize = 10;
+    list&lt;pair&lt;string, int&gt;&gt; table[tableSize];
 
-    hash(key) {
-        let hash = 0;
-        for (let i = 0; i < key.length; i++) {
-            hash += key.charCodeAt(i);
+    int hash(string key) {
+        int hashValue = 0;
+        for (char c : key) {
+            hashValue += c;
         }
-        return hash % this.table.length;
+        return hashValue % tableSize;
     }
 
-    set(key, value) {
-        const index = this.hash(key);
-        if (!this.table[index]) {
-            this.table[index] = [];
-        }
-        this.table[index].push([key, value]);
+public:
+    void insert(string key, int value) {
+        int index = hash(key);
+        table[index].push_back(make_pair(key, value));
     }
 
-    get(key) {
-        const index = this.hash(key);
-        const bucket = this.table[index];
-        if (bucket) {
-            for (let i = 0; i < bucket.length; i++) {
-                if (bucket[i][0] === key) {
-                    return bucket[i][1];
-                }
+    int get(string key) {
+        int index = hash(key);
+        for (auto& element : table[index]) {
+            if (element.first == key) {
+                return element.second;
             }
         }
-        return undefined;
+        return -1;  // Return -1 if the key is not found
     }
 
-    remove(key) {
-        const index = this.hash(key);
-        const bucket = this.table[index];
-        if (bucket) {
-            for (let i = 0; i < bucket.length; i++) {
-                if (bucket[i][0] === key) {
-                    bucket.splice(i, 1);
-                    return;
-                }
+    void remove(string key) {
+        int index = hash(key);
+        for (auto it = table[index].begin(); it != table[index].end(); ++it) {
+            if (it->first == key) {
+                table[index].erase(it);
+                return;
             }
         }
     }
+};
+
+int main() {
+    HashTable ht;
+    ht.insert("name", 100);
+    ht.insert("age", 30);
+
+    cout &lt;&lt; "Name: " &lt;&lt; ht.get("name") &lt;&lt; endl;
+    cout &lt;&lt; "Age: " &lt;&lt; ht.get("age") &lt;&lt; endl;
+
+    ht.remove("name");
+    cout &lt;&lt; "Name after removal: " &lt;&lt; ht.get("name") &lt;&lt; endl;
+
+    return 0;
 }
-
-// Example Usage:
-let hashTable = new HashTable(10);
-hashTable.set('name', 'John Doe');
-hashTable.set('age', 30);
-console.log(hashTable.get('name'));  // Output: John Doe
-console.log(hashTable.get('age'));   // Output: 30
-hashTable.remove('name');
-console.log(hashTable.get('name'));  // Output: undefined
     </pre>
     <a href="index.html" class="btn">Back to Business Cases</a>
 </main>
