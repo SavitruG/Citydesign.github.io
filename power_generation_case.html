@@ -27,15 +27,18 @@
         h3 {
             color: #444;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-        p {
-            margin: 10px 0;
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
         }
-        .section {
-            margin-bottom: 40px;
+        th {
+            background-color: #f4f4f4;
         }
         .button-container {
             margin-top: 10px;
@@ -63,61 +66,172 @@
         <h1>Business Case: Power Generation and Air Quality</h1>
 
         <div class="section">
-            <h2>Power Generation: Renewable Energy in Smart Cities</h2>
-            <p><strong>Target 11.2:</strong> By 2030, we aim to provide access to safe, affordable, accessible, and sustainable transport systems. One way to meet this target is through clean energy solutions. Imagine electric vehicles powered by renewable sources like solar and wind. This shift reduces reliance on fossil fuels, thus contributing to cleaner cities and greener transportation.</p>
+            <h2>Power Generation Algorithms: Managing Renewable Energy</h2>
 
-            <p><strong>Target 11.6:</strong> Another ambitious target is to reduce the environmental impact of cities, especially by improving air quality. To achieve this, cities are transitioning to cleaner energy sources, primarily solar, wind, and hydroelectricity, which reduce harmful emissions compared to conventional power plants.</p>
+            <h3>1. Binary Search Tree (BST)</h3>
+            <p>Used to manage the scheduling of renewable energy distribution.</p>
+            <table>
+                <tr>
+                    <th>Operation</th>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+                <tr>
+                    <td>Insert Energy Demand</td>
+                    <td>City A: 60 kW</td>
+                    <td>Root = 60 kW</td>
+                </tr>
+                <tr>
+                    <td>Insert Energy Demand</td>
+                    <td>City B: 40 kW</td>
+                    <td>Left of Root = 40 kW</td>
+                </tr>
+                <tr>
+                    <td>Insert Energy Supply</td>
+                    <td>City C: 70 kW</td>
+                    <td>Right of Root = 70 kW</td>
+                </tr>
+                <tr>
+                    <td>Query Supply Greater Than 50 kW</td>
+                    <td>N/A</td>
+                    <td>70 kW</td>
+                </tr>
+                <tr>
+                    <td>Find Minimum</td>
+                    <td>N/A</td>
+                    <td>40 kW</td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <a class="btn" href="binary_search_tree.html" target="_blank">Code Link</a>
+            </div>
+
+            <h3>2. Dijkstra’s Algorithm</h3>
+            <p>Optimizes the distribution of electricity from power plants to different zones.</p>
+            <table>
+                <tr>
+                    <th>Node (Location)</th>
+                    <th>Distance from Source (Power Plant)</th>
+                    <th>Optimal Path</th>
+                </tr>
+                <tr>
+                    <td>Power Plant</td>
+                    <td>0 km</td>
+                    <td>Power Plant</td>
+                </tr>
+                <tr>
+                    <td>Residential Area A</td>
+                    <td>5 km</td>
+                    <td>Power Plant → Residential Area A</td>
+                </tr>
+                <tr>
+                    <td>Residential Area B</td>
+                    <td>15 km</td>
+                    <td>Power Plant → Residential Area A → Residential Area B</td>
+                </tr>
+                <tr>
+                    <td>Industrial Zone</td>
+                    <td>20 km</td>
+                    <td>Power Plant → Industrial Zone</td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <a class="btn" href="dijkstra_code.html" target="_blank">Code Link</a>
+            </div>
+
+            <h3>3. Merge Sort</h3>
+            <p>Organizes energy demand or sensor data in ascending order.</p>
+            <table>
+                <tr>
+                    <th>Step</th>
+                    <th>Unsorted List</th>
+                    <th>Action</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>Initial Data</td>
+                    <td>80 kW, 50 kW, 40 kW, 70 kW</td>
+                    <td>Split</td>
+                    <td>80, 50 | 40, 70</td>
+                </tr>
+                <tr>
+                    <td>First Merge</td>
+                    <td>80, 50</td>
+                    <td>Sort & Merge</td>
+                    <td>50, 80</td>
+                </tr>
+                <tr>
+                    <td>Final Merge</td>
+                    <td>50, 80 | 40, 70</td>
+                    <td>Sort & Merge</td>
+                    <td>40, 50, 70, 80</td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <a class="btn" href="sorting_algorithm_code.html" target="_blank">Code Link</a>
+            </div>
         </div>
 
         <div class="section">
-            <h2>Power Generation Algorithms: Managing Renewable Energy</h2>
+            <h2>Air Quality Optimization: Smarter Cities</h2>
+            
+            <h3>1. Floyd’s Algorithm</h3>
+            <p>Ensures data from air quality monitoring sensors takes the shortest paths.</p>
+            <table>
+                <tr>
+                    <th>Sensor Pair</th>
+                    <th>Path</th>
+                    <th>Distance</th>
+                </tr>
+                <tr>
+                    <td>Sensor A → Sensor B</td>
+                    <td>Direct</td>
+                    <td>2 km</td>
+                </tr>
+                <tr>
+                    <td>Sensor A → Sensor C</td>
+                    <td>A → B → C</td>
+                    <td>3 km</td>
+                </tr>
+                <tr>
+                    <td>Sensor C → Sensor D</td>
+                    <td>Direct</td>
+                    <td>4 km</td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <a class="btn" href="floyd_warshall_algorithm_code.html" target="_blank">Code Link</a>
+            </div>
 
-            <h3>1. Renewable Energy Management</h3>
-            <ul>
-                <li>
-                    <strong>Binary Search Tree (BST):</strong> This algorithm helps manage large sets of data, such as energy demand and production figures. 
-                    <div class="button-container">
-                        <a class="btn" href="binary_search_tree.html" target="_blank">Code Link</a>
-                    </div>
-                </li>
-                <li>
-                    <strong>Dijkstra’s Algorithm:</strong> Efficient power distribution is critical in a smart city. 
-                    <div class="button-container">
-                        <a class="btn" href="dijkstra_code.html" target="_blank">Code Link</a>
-                    </div>
-                </li>
-                <li>
-                    <strong>Merge Sort:</strong> Sorting massive datasets quickly ensures smooth operation of energy grids.
-                    <div class="button-container">
-                        <a class="btn" href="sorting_algorithm_code.html" target="_blank">Code Link</a>
-                    </div>
-                </li>
-                <li>
-                    <strong>Heap Sort:</strong> Prioritize energy distribution based on urgency using this algorithm.
-                    <div class="button-container">
-                        <a class="btn" href="heap.html" target="_blank">Code Link</a>
-                    </div>
-                </li>
-            </ul>
-
-            <h3>2. Air Quality Optimization: Smarter Cities</h3>
-            <ul>
-                <li>
-                    <strong>Floyd’s Algorithm:</strong> Ensure timely collection of air pollution data.
-                    <div class="button-container">
-                        <a class="btn" href="floyd_warshall_algorithm_code.html" target="_blank">Code Link</a>
-                    </div>
-                </li>
-                <li>
-                    <strong>DFS and BFS:</strong> Understand and monitor pollution using graph traversal techniques.
-                    <div class="button-container">
-                        <a class="btn" href="dfs_algorithm_code.html" target="_blank">Code Link</a>
-                        <a class="btn" href="bfs_algorithm_code.html" target="_blank">Code Link</a>
-                    </div>
-                </li>
-            </ul>
+            <h3>2. DFS and BFS</h3>
+            <p>Identifies pollution sources and maps their spread.</p>
+            <table>
+                <tr>
+                    <th>Traversal Type</th>
+                    <th>Scenario</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>DFS</td>
+                    <td>Track pollution from industrial zones</td>
+                    <td>Visited all connected zones</td>
+                </tr>
+                <tr>
+                    <td>BFS</td>
+                    <td>Monitor pollution levels in the city grid</td>
+                    <td>Mapped all adjacent zones</td>
+                </tr>
+                <tr>
+                    <td>BFS</td>
+                    <td>Check for safe (clean) zones</td>
+                    <td>Located available clean areas</td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <a class="btn" href="dfs_algorithm_code.html" target="_blank">DFS Code</a>
+                <a class="btn" href="bfs_algorithm_code.html" target="_blank">BFS Code</a>
+            </div>
         </div>
     </div>
 </body>
 </html>
-
