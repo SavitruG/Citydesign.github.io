@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra Algorithm in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dijkstra's Algorithm in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;limits&gt;
+#include &lt;unordered_map&gt;
+
+using namespace std;
+
+struct Edge {
+    int to, weight;
+};
+
+struct Node {
+    int vertex;
+    int dist;
+    bool operator&gt;(const Node&amp; other) const {
+        return dist &gt; other.dist;
+    }
+};
+
+void Dijkstra(const vector&lt;vector&lt;Edge&gt;&gt;&amp; graph, int s) {
+    int V = graph.size();
+    vector&lt;int&gt; dist(V, INT_MAX); // distance from source to each vertex
+    vector&lt;int&gt; prev(V, -1);      // previous vertex on the shortest path
+    dist[s] = 0;
+
+    priority_queue&lt;Node, vector&lt;Node&gt;, greater&lt;Node&gt;&gt; pq; // Min-heap priority queue
+    pq.push({s, 0});
+
+    while (!pq.empty()) {
+        int u = pq.top().vertex;
+        pq.pop();
+
+        // Traverse all adjacent vertices of u
+        for (const auto&amp; edge : graph[u]) {
+            int v = edge.to;
+            int weight = edge.weight;
+
+            // Relaxation step
+            if (dist[u] + weight &lt; dist[v]) {
+                dist[v] = dist[u] + weight;
+                prev[v] = u;
+                pq.push({v, dist[v]});
+            }
+        }
+    }
+
+    // Output the results
+    for (int v = 0; v &lt; V; v++) {
+        cout &lt;&lt; "Vertex " &lt;&lt; v &lt;&lt; ": distance = " &lt;&lt; dist[v] &lt;&lt; ", previous vertex = " &lt;&lt; prev[v] &lt;&lt; endl;
+    }
+}
+
+int main() {
+    int V = 5; // Number of vertices
+    vector&lt;vector&lt;Edge&gt;&gt; graph(V);
+
+    // Example graph: Add edges (from, to, weight)
+    graph[0].push_back({1, 10});
+    graph[0].push_back({2, 5});
+    graph[1].push_back({2, 2});
+    graph[1].push_back({3, 1});
+    graph[2].push_back({1, 3});
+    graph[2].push_back({3, 9});
+    graph[3].push_back({4, 4});
+    graph[4].push_back({0, 7});
+
+    int startVertex = 0;
+    Dijkstra(graph, startVertex);
+
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
