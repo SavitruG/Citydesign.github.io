@@ -37,19 +37,21 @@
 <body>
     <h1>Case Study 1: Metro Public Transportation in Aryavarta</h1>
     <p>
-        Aryavarta is growing rapidly, and traffic congestion is becoming a major issue. A metro system has been proposed to connect key areas: Central Square, Tech Park, City Mall, Education Hub, Industrial Zone, and Residential Area. The goal is to reduce travel time, ease road traffic, and make commuting more sustainable.
+        Aryavarta is a growing city. Traffic is becoming a big problem because there are too many vehicles on the road. 
+        A metro system is being planned to connect important areas like Central Square, Tech Park, City Mall, Education Hub, Industrial Zone, and Residential Area. 
+        This will help people travel faster and reduce traffic on the roads.
     </p>
 
-    <h2>How Locations Were Decided</h2>
+    <h2>Why These Places Were Chosen</h2>
     <p>
-        Locations were chosen based on their importance in city life:
+        The metro system focuses on places that are important for daily life:
         <ul>
-            <li><b>Central Square:</b> The city's hub for public services and entertainment.</li>
-            <li><b>Tech Park:</b> A center for IT companies and employment opportunities.</li>
-            <li><b>City Mall:</b> A popular shopping and leisure destination.</li>
-            <li><b>Education Hub:</b> An area with schools and universities.</li>
-            <li><b>Industrial Zone:</b> Key for manufacturing and trade.</li>
-            <li><b>Residential Area:</b> A densely populated neighborhood.</li>
+            <li><b>Central Square:</b> The main area for city events and public services.</li>
+            <li><b>Tech Park:</b> Where many people work in IT companies.</li>
+            <li><b>City Mall:</b> A popular shopping and entertainment spot.</li>
+            <li><b>Education Hub:</b> Schools and colleges are located here.</li>
+            <li><b>Industrial Zone:</b> Where factories and businesses are based.</li>
+            <li><b>Residential Area:</b> Where most people live.</li>
         </ul>
     </p>
 
@@ -100,43 +102,53 @@
 
     <h3>Dijkstra's Algorithm</h3>
     <p>
-        This algorithm finds the shortest path between two stations. For example, to travel from Central Square to Residential Area, Dijkstra's Algorithm calculates the following path:
-        <i>Central Square → Tech Park → Education Hub → Residential Area</i>, with a total distance of <b>18 km</b>.
+        This algorithm helps us find the shortest path between two stations. For example, if someone wants to travel from 
+        Central Square to Residential Area, the algorithm finds the route:
+        <i>Central Square → Tech Park → Education Hub → Residential Area</i>, which is <b>18 km</b>.
     </p>
     <p>
-        The algorithm works by assigning a tentative distance to each station. It starts from the source (e.g., Central Square) and updates the distances of neighboring stations based on the route cost. Once all neighbors are processed, it moves to the next closest station until the destination is reached.
+        How it works:
+        <ul>
+            <li>It starts at the first station (e.g., Central Square).</li>
+            <li>It looks at all the connected stations and picks the closest one (shortest distance).</li>
+            <li>It repeats this for every station until the destination is reached.</li>
+        </ul>
+        This helps create routes that save time for passengers.
     </p>
 
     <h3>Kruskal's Algorithm</h3>
     <p>
-        Kruskal's Algorithm was used to design the initial metro network at the lowest cost. The algorithm selects routes (edges) with the smallest distances, ensuring that all stations are connected without forming cycles. For Aryavarta, the network started with:
+        Kruskal’s Algorithm is used to design the metro network with the lowest cost. It connects the stations 
+        using the shortest routes without creating loops. For Aryavarta, the first metro lines were:
         <i>Central Square → Tech Park → Education Hub → Residential Area → Industrial Zone → City Mall</i>.
     </p>
     <p>
-        This approach minimizes construction costs while ensuring all key areas are reachable.
+        This method ensures all stations are connected while keeping construction costs low.
     </p>
 
     <h3>Bellman-Ford Algorithm</h3>
     <p>
-        Bellman-Ford handles cases where delays might occur on certain routes. It calculates the shortest path from a source station to all other stations, considering any penalties or discounts. For example, if there’s a delay between City Mall and Industrial Zone, the algorithm finds alternative paths to maintain efficiency.
+        Bellman-Ford Algorithm is used when there might be delays or issues on some routes. It finds the shortest path 
+        between stations while considering any extra travel time (like delays between City Mall and Industrial Zone).
+        It ensures the metro system still works efficiently, even with these problems.
     </p>
 
     <h2>Benefits of the Metro System</h2>
     <p>
-        The proposed metro system addresses several urban issues:
+        The metro system will:
         <ul>
-            <li>Reduces road traffic and pollution.</li>
-            <li>Offers fast and reliable transportation across the city.</li>
-            <li>Connects residential areas to workplaces, malls, and schools.</li>
-            <li>Promotes sustainable urban development.</li>
+            <li>Make travel faster for everyone.</li>
+            <li>Reduce traffic on the roads and cut pollution.</li>
+            <li>Connect important places like homes, offices, and schools.</li>
+            <li>Help the city grow in a smart and sustainable way.</li>
         </ul>
     </p>
 
     <h2>Results</h2>
     <ul>
         <li>Average travel distance: <b>8.2 km</b>.</li>
-        <li>Most important station: <b>Central Square</b>.</li>
-        <li>Efficient network design saves time and resources.</li>
+        <li>Key station: <b>Central Square</b>, as it connects to all other areas.</li>
+        <li>The metro design is simple, efficient, and cost-effective.</li>
     </ul>
 </body>
 </html>
