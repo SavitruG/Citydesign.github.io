@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort Algorithm in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MergeSort Algorithm in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+// Merge function to merge two sorted arrays into one
+void Merge(vector&lt;int&gt;&amp; B, vector&lt;int&gt;&amp; C, vector&lt;int&gt;&amp; A) {
+    int i = 0, j = 0, k = 0;
+    int p = B.size(), q = C.size();
+
+    // Merge the two arrays while both arrays have elements
+    while (i &lt; p && j &lt; q) {
+        if (B[i] &lt;= C[j]) {
+            A[k++] = B[i++];
+        } else {
+            A[k++] = C[j++];
+        }
+    }
+
+    // If elements remain in B, copy them to A
+    while (i &lt; p) {
+        A[k++] = B[i++];
+    }
+
+    // If elements remain in C, copy them to A
+    while (j &lt; q) {
+        A[k++] = C[j++];
+    }
+}
+
+// MergeSort function to recursively sort the array
+void MergeSort(vector&lt;int&gt;&amp; A) {
+    int n = A.size();
+    if (n &gt; 1) {
+        // Split the array into two halves
+        int mid = n / 2;
+        vector&lt;int&gt; B(A.begin(), A.begin() + mid); // First half
+        vector&lt;int&gt; C(A.begin() + mid, A.end());   // Second half
+
+        // Recursively sort both halves
+        MergeSort(B);
+        MergeSort(C);
+
+        // Merge the two sorted halves into the original array A
+        Merge(B, C, A);
+    }
+}
+
+// Function to print the array
+void PrintArray(const vector&lt;int&gt;&amp; A) {
+    for (int i = 0; i &lt; A.size(); ++i) {
+        cout &lt;&lt; A[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    vector&lt;int&gt; A = {12, 11, 13, 5, 6, 7};
+
+    cout &lt;&lt; "Original Array: ";
+    PrintArray(A);
+
+    // Sorting the array using MergeSort
+    MergeSort(A);
+
+    cout &lt;&lt; "Sorted Array: ";
+    PrintArray(A);
+
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
