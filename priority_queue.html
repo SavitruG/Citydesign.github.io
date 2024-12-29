@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority Queue in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Priority Queue in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+int main() {
+    // Declaring a priority queue
+    priority_queue&lt;int&gt; pq;
+    
+    // Inserting elements into the priority queue
+    pq.push(10);
+    pq.push(30);
+    pq.push(20);
+    pq.push(5);
+    
+    // Printing the top element (max element in default priority queue)
+    cout &lt;&lt; "Top element (Max element): " &lt;&lt; pq.top() &lt;&lt; endl;
+    
+    // Removing the top element
+    pq.pop();
+    
+    cout &lt;&lt; "After popping, new top element: " &lt;&lt; pq.top() &lt;&lt; endl;
+    
+    // Removing all elements
+    cout &lt;&lt; "Priority Queue elements: " &lt;&lt; endl;
+    while (!pq.empty()) {
+        cout &lt;&lt; pq.top() &lt;&lt; " ";  // Displaying the top element
+        pq.pop();  // Popping the top element
+    }
+    
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
