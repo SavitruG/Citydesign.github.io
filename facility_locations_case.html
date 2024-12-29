@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: Optimal Facility Locations in Urban Cities</title>
+    <title>Case Study 2: Optimal Facility Locations in Aryavarta</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,115 +27,104 @@
 </head>
 <body>
     <article>
-        <h1>Case Study: Optimal Facility Locations in Urban Cities</h1>
+        <h1>Case Study: Optimal Facility Locations in Aryavarta</h1>
 
         <p>
-            In this case study, we analyze the optimal placement of essential facilities like hospitals and police stations in urban areas.
-            Using data from three existing cities—City A, City B, and City C—we propose methods to ensure accessibility for residents.
-            The algorithms used to solve this problem include Floyd-Warshall for calculating shortest paths, AVL Trees for managing data efficiently,
-            sorting for ranking locations, and Depth-First Search (DFS) for exploring city connectivity.
+            This case study focuses on the city of Aryavarta, a newly designed urban area. The goal is to decide the best locations for essential facilities like hospitals and police stations. The placement must ensure accessibility for all residents and enhance the overall quality of life. Several algorithms are used to solve this problem effectively, each explained in simple terms.
         </p>
 
         <h2>City Data</h2>
         <table>
             <thead>
                 <tr>
-                    <th>City</th>
-                    <th>Population</th>
-                    <th>Residential Areas</th>
-                    <th>Administrative Areas</th>
-                    <th>Industrial Areas</th>
+                    <th>Category</th>
+                    <th>Details</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>City A</td>
-                    <td>500,000</td>
-                    <td>15</td>
-                    <td>5</td>
-                    <td>3</td>
+                    <td>Total Population</td>
+                    <td>1.5 million</td>
                 </tr>
                 <tr>
-                    <td>City B</td>
-                    <td>800,000</td>
-                    <td>20</td>
+                    <td>Residential Areas</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Administrative Areas</td>
                     <td>8</td>
-                    <td>5</td>
                 </tr>
                 <tr>
-                    <td>City C</td>
-                    <td>1,200,000</td>
-                    <td>30</td>
+                    <td>Industrial Areas</td>
                     <td>10</td>
-                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Average Travel Time</td>
+                    <td>15 minutes</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2>Problem Statement</h2>
+        <h2>Algorithms and Their Role</h2>
+
+        <h3>1. Floyd-Warshall Algorithm</h3>
         <p>
-            The goal is to place facilities such that no area in the city is more than 15 minutes away from a hospital or police station.
-            Additionally, we aim to minimize the total travel distance between facilities and densely populated areas.
+            The Floyd-Warshall algorithm is used to calculate the shortest paths between all areas in Aryavarta. It identifies the central locations that reduce travel time for residents. For example, this algorithm helps decide where hospitals or police stations should be placed so that no area is more than 15 minutes away.
+        </p>
+        <p>
+            By reducing travel time, this algorithm ensures that residents receive faster medical attention and emergency services, improving their safety and well-being.
         </p>
 
-        <h2>Methodology</h2>
-        <h3>1. Shortest Path Calculation (Floyd-Warshall)</h3>
+        <h3>2. AVL Tree</h3>
         <p>
-            We use the Floyd-Warshall algorithm to compute the shortest paths between all pairs of areas in the city.
-            This helps us identify the central locations that minimize travel distances for all residents.
+            The AVL Tree is a data structure used to store and manage information about areas, such as population density and proximity to other neighborhoods. It keeps data sorted and allows quick access and updates.
+        </p>
+        <p>
+            Using an AVL Tree ensures that decisions about facility placement are based on up-to-date and efficiently managed data. This improves decision-making and optimizes resource allocation.
         </p>
 
-        <h3>2. Efficient Data Management (AVL Tree)</h3>
+        <h3>3. Sorting</h3>
         <p>
-            AVL Trees are used to store and manage information about potential facility locations, such as population density and proximity to other areas.
-            This ensures fast retrieval and updating of data during analysis.
+            Sorting is used to rank potential facility locations based on factors like population density and centrality. For example, densely populated areas are given higher priority for facilities.
+        </p>
+        <p>
+            By ranking locations, sorting ensures that facilities are placed where they are needed the most, reducing overcrowding and enhancing accessibility.
         </p>
 
-        <h3>3. Location Ranking (Sorting)</h3>
+        <h3>4. Depth-First Search (DFS)</h3>
         <p>
-            We sort potential locations based on factors like population density, centrality, and travel time. The top-ranked locations are selected for facility placement.
+            DFS is used to check the connectivity of different areas in Aryavarta. It ensures that all neighborhoods are accessible from the selected facility locations.
         </p>
-
-        <h3>4. Connectivity Check (DFS)</h3>
         <p>
-            Using DFS, we verify that all areas in the city are connected and accessible from the chosen facility locations.
+            This algorithm guarantees that no area is isolated, improving overall access to essential services.
         </p>
 
         <h2>Results</h2>
         <p>
-            After applying these methods, the following locations were identified as optimal for facility placement:
+            After applying these algorithms, the following locations were identified as optimal for facility placement in Aryavarta:
         </p>
         <table>
             <thead>
                 <tr>
-                    <th>City</th>
-                    <th>Hospital Locations</th>
-                    <th>Police Station Locations</th>
+                    <th>Facility</th>
+                    <th>Locations</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>City A</td>
-                    <td>Area 3, Area 8</td>
-                    <td>Area 6, Area 14</td>
+                    <td>Hospitals</td>
+                    <td>Sector 5, Sector 12, Sector 20</td>
                 </tr>
                 <tr>
-                    <td>City B</td>
-                    <td>Area 5, Area 12, Area 19</td>
-                    <td>Area 4, Area 15</td>
-                </tr>
-                <tr>
-                    <td>City C</td>
-                    <td>Area 7, Area 16, Area 23</td>
-                    <td>Area 9, Area 18, Area 27</td>
+                    <td>Police Stations</td>
+                    <td>Sector 3, Sector 15, Sector 27</td>
                 </tr>
             </tbody>
         </table>
 
         <h2>Conclusion</h2>
         <p>
-            By combining graph algorithms with data structures, we can efficiently determine optimal facility locations in urban cities.
-            This approach ensures equitable access to essential services while minimizing travel distances for residents.
+            The use of algorithms such as Floyd-Warshall, AVL Trees, sorting, and DFS ensures efficient and equitable placement of facilities in Aryavarta. These methods improve accessibility, reduce response times, and enhance the quality of life for all residents.
         </p>
     </article>
 </body>
