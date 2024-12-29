@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Case - Akash Hiremath</title>
+    <style>
+        body {
+            font-family: 'Product Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container a {
+            text-decoration: none;
+            color: white;
+            background-color: #004080;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button-container a:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Problems and Solutions for Travel and Tourism</h1>
+        <p></p>
+    </header>
+    <section>
+        <h2>Details</h2>
+        <p>This section contains the business case details of Akash Hiremath.</p>
+
+        <h3>1. Sorting Travel Packages by Cost (ARYAVARTA)</h3>
+        <p><strong>Problem:</strong> Tourists in ARYAVARTA need an easy way to compare travel packages and choose the most affordable option.</p>
+        <p><strong>Solution 1: Merge Sort</strong></p>
+        <p>Merge sort divides the list into halves and sorts each half individually before merging them back together in sorted order. This method ensures the travel packages are sorted efficiently, even if the dataset grows large, with a time complexity of O(n log n).</p>
+        <table>
+            <tr>
+                <th>Package</th>
+                <th>Price (INR)</th>
+            </tr>
+            <tr>
+                <td>Package E</td>
+                <td>₹80,000</td>
+            </tr>
+            <tr>
+                <td>Package B</td>
+                <td>₹85,000</td>
+            </tr>
+            <tr>
+                <td>Package D</td>
+                <td>₹95,000</td>
+            </tr>
+            <tr>
+                <td>Package A</td>
+                <td>₹1,00,000</td>
+            </tr>
+            <tr>
+                <td>Package C</td>
+                <td>₹1,20,000</td>
+            </tr>
+        </table>
+
+        <p><strong>Solution 2: Selection Sort</strong></p>
+        <p>Selection sort works by repeatedly selecting the smallest element and moving it to its correct position. Though less efficient for larger datasets, it’s a simple algorithm with a time complexity of O(n²).</p>
+        <table>
+            <tr>
+                <th>Package</th>
+                <th>Price (INR)</th>
+            </tr>
+            <tr>
+                <td>Package E</td>
+                <td>₹80,000</td>
+            </tr>
+            <tr>
+                <td>Package B</td>
+                <td>₹85,000</td>
+            </tr>
+            <tr>
+                <td>Package D</td>
+                <td>₹95,000</td>
+            </tr>
+            <tr>
+                <td>Package A</td>
+                <td>₹1,00,000</td>
+            </tr>
+            <tr>
+                <td>Package C</td>
+                <td>₹1,20,000</td>
+            </tr>
+        </table>
+
+        <h3>2. Finding the Shortest Path for City Tours (ARYAVARTA)</h3>
+        <p><strong>Problem:</strong> Tourists in ARYAVARTA want to minimize their travel distance between popular locations for a more efficient and pleasant experience.</p>
+        <p><strong>Solution 1: Dijkstra’s Algorithm</strong></p>
+        <p>Dijkstra’s algorithm helps find the shortest possible path from a starting location to all other locations by prioritizing paths with the smallest cumulative distance. This method ensures that the route taken covers the least distance and saves time.</p>
+        <table>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Distance (km)</th>
+            </tr>
+            <tr>
+                <td>Hulipattana</td>
+                <td>Navilupete</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Hulipattana</td>
+                <td>Kamalanagar</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Navilupete</td>
+                <td>Kamalanagar</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Navilupete</td>
+                <td>Hosakadu</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Kamalanagar</td>
+                <td>Hosakadu</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p><strong>Shortest Path Using Dijkstra's Algorithm:</strong> The shortest path from Hulipattana to Hosakadu is: Hulipattana → Navilupete → Kamalanagar → Hosakadu, totaling 9 km.</p>
+
+        <p><strong>Solution 2: Floyd-Warshall Algorithm</strong></p>
+        <p>Floyd-Warshall computes the shortest paths between all pairs of locations, making it useful for understanding the shortest path between multiple locations, not just a single start point.</p>
+        <table>
+            <tr>
+                <th>From/To</th>
+                <th>Hulipattana</th>
+                <th>Navilupete</th>
+                <th>Kamalanagar</th>
+                <th>Hosakadu</th>
+            </tr>
+            <tr>
+                <td>Hulipattana</td>
+                <td>0</td>
+                <td>5</td>
+                <td>8</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Navilupete</td>
+                <td>5</td>
+                <td>0</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Kamalanagar</td>
+                <td>8</td>
+                <td>3</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Hosakadu</td>
+                <td>7</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <p><strong>Optimal Path from Hulipattana to Hosakadu:</strong> Hulipattana → Navilupete → Hosakadu = 7 km</p>
+
+        <h3>3. Sorting Hotels by Rating (ARYAVARTA)</h3>
+        <p><strong>Problem:</strong> Tourists in ARYAVARTA want to ensure they stay in the highest-rated hotels. Sorting hotels by customer rating helps them make an informed decision.</p>
+        <p><strong>Solution 1: Heap Sort</strong></p>
+        <p>Heap sort organizes the data in a binary heap structure, which allows for efficient sorting by repeatedly extracting the largest (or smallest) element. This results in O(n log n) time complexity, making it well-suited for handling larger datasets like hotel ratings.</p>
+        <table>
+            <tr>
+                <th>Hotel</th>
+                <th>Rating (1-5)</th>
+            </tr>
+            <tr>
+                <td>Aryavarta Palace</td>
+                <td>5.0</td>
+            </tr>
+            <tr>
+                <td>Mountain View Hotel</td>
+                <td>4.7</td>
+            </tr>
+            <tr>
+                <td>Golden Sands Inn</td>
+                <td>4.5</td>
+            </tr>
+            <tr>
+                <td>River View Hotel</td>
+                <td>4.2</td>
+            </tr>
+            <tr>
+                <td>Hilltop Resort</td>
+                <td>3.8</td>
+            </tr>
+        </table>
+
+        <p><strong>Solution 2: Radix Sort</strong></p>
+        <p>Radix sort works by sorting numbers digit by digit, which can be very efficient when sorting numbers (like hotel ratings). It ensures that the hotels are sorted in ascending or descending order based on the rating value.</p>
+        <table>
+            <tr>
+                <th>Hotel</th>
+                <th>Rating (1-5)</th>
+            </tr>
+            <tr>
+                <td>Aryavarta Palace</td>
+                <td>5.0</td>
+            </tr>
+            <tr>
+                <td>Mountain View Hotel</td>
+                <td>4.7</td>
+            </tr>
+            <tr>
+                <td>Golden Sands Inn</td>
+                <td>4.5</td>
+            </tr>
+            <tr>
+                <td>River View Hotel</td>
+                <td>4.2</td>
+            </tr>
+            <tr>
+                <td>Hilltop Resort</td>
+                <td>3.8</td>
+            </tr>
+        </table>
+
+        <h3>4. Optimizing Tourist Transport Routes (ARYAVARTA)</h3>
+        <p><strong>Problem:</strong> Tourists in ARYAVARTA need an optimized transport route that minimizes both the cost and the time it takes to travel between destinations.</p>
+        <p><strong>Solution 1: Dijkstra’s Algorithm</strong></p>
+        <p>Dijkstra’s algorithm is used to find the shortest path in terms of both cost and time, helping to minimize overall travel time and expenses.</p>
+        <table>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Cost (INR)</th>
+                <th>Time (hours)</th>
+            </tr>
+            <tr>
+                <td>Hulipattana</td>
+                <td>Navilupete</td>
+                <td>₹50</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Hulipattana</td>
+                <td>Kamalanagar</td>
+                <td>₹60</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Navilupete</td>
+                <td>Kamalanagar</td>
+                <td>₹40</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p><strong>Optimal Route (using Dijkstra's Algorithm):</strong> The best route from Hulipattana to Kamalanagar is: Hulipattana → Navilupete → Kamalanagar with a total cost of ₹90 and total time of 3 hours.</p>
+
+        <p><strong>Solution 2: Bellman-Ford Algorithm</strong></p>
+        <p>Bellman-Ford is another algorithm that can be used to find the shortest paths in a graph. It is especially useful when the graph has negative weights, though it works equally well with positive weights, like in this case.</p>
+        <p><strong>Optimal Route (using Bellman-Ford Algorithm):</strong> The optimal route from Hulipattana to Kamalanagar is the same as in Dijkstra’s algorithm: Hulipattana → Navilupete → Kamalanagar with a total cost of ₹90 and total time of 3 hours.</p>
+
+        <h3>5. Managing Natural Disaster Risks for Tourists (ARYAVARTA)</h3>
+        <p><strong>Problem:</strong> In case of a natural disaster, tourists in ARYAVARTA need to be safely evacuated from high-risk areas to lower-risk locations.</p>
+        <p><strong>Solution 1: Floyd-Warshall Algorithm</strong></p>
+        <p>The Floyd-Warshall algorithm helps calculate the shortest paths between all pairs of locations, allowing you to optimize evacuation routes for tourists by minimizing travel time to safe zones.</p>
+        <table>
+            <tr>
+                <th>Location</th>
+                <th>Risk Level (1-5)</th>
+                <th>Tourists Present</th>
+            </tr>
+            <tr>
+                <td>Hulipattana</td>
+                <td>5 (High)</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Navilupete</td>
+                <td>3 (Medium)</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Kamalanagar</td>
+                <td>1 (Low)</td>
+                <td>50</td>
+            </tr>
+        </table>
+        <p><strong>Evacuation Plan (using Floyd-Warshall):</strong> Tourists from Hulipattana (high-risk) will be directed to Kamalanagar (low-risk), and the shortest route to Kamalanagar is 8 km.</p>
+        
+        <div class="button-container">
+            <a href="#database">Database</a>
+            <a href="#codefile">Codefile</a>
+        </div>
+
+    </section>
+</body>
+</html>
