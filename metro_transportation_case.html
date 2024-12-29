@@ -6,10 +6,22 @@
     <title>Case Study 1: Metro Public Transportation in Aryavarta</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Product Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
             margin: 20px;
-            background-color: #f9f9f9;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
         }
         h1, h2 {
             color: #333;
@@ -32,133 +44,98 @@
         ul {
             padding-left: 20px;
         }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #004080;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+        .button-container a:hover {
+            background-color: #0059b3;
+        }
     </style>
 </head>
 <body>
-    <h1>Case Study 1: Metro Public Transportation in Aryavarta</h1>
-    <p>
-        Aryavarta is a growing city. Traffic is becoming a big problem because there are too many vehicles on the road. 
-        A metro system is being planned to connect important areas like Central Square, Tech Park, City Mall, Education Hub, Industrial Zone, and Residential Area. 
-        This will help people travel faster and reduce traffic on the roads.
-    </p>
-
-    <h2>Why These Places Were Chosen</h2>
-    <p>
-        The metro system focuses on places that are important for daily life:
-        <ul>
-            <li><b>Central Square:</b> The main area for city events and public services.</li>
-            <li><b>Tech Park:</b> Where many people work in IT companies.</li>
-            <li><b>City Mall:</b> A popular shopping and entertainment spot.</li>
-            <li><b>Education Hub:</b> Schools and colleges are located here.</li>
-            <li><b>Industrial Zone:</b> Where factories and businesses are based.</li>
-            <li><b>Residential Area:</b> Where most people live.</li>
-        </ul>
-    </p>
-
-    <h2>Metro Map Data</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Station</th>
-                <th>Connections</th>
-                <th>Distance (km)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b>Central Square</b></td>
-                <td>Tech Park, City Mall</td>
-                <td>5, 8</td>
-            </tr>
-            <tr>
-                <td>Tech Park</td>
-                <td>Central Square, Education Hub</td>
-                <td>5, 7</td>
-            </tr>
-            <tr>
-                <td>City Mall</td>
-                <td>Central Square, Industrial Zone</td>
-                <td>8, 10</td>
-            </tr>
-            <tr>
-                <td>Education Hub</td>
-                <td>Tech Park, Residential Area</td>
-                <td>7, 6</td>
-            </tr>
-            <tr>
-                <td>Industrial Zone</td>
-                <td>City Mall, Residential Area</td>
-                <td>10, 9</td>
-            </tr>
-            <tr>
-                <td>Residential Area</td>
-                <td>Education Hub, Industrial Zone</td>
-                <td>6, 9</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Algorithms Used</h2>
-
-    <h3>Dijkstra's Algorithm</h3>
-    <p>
-        This algorithm helps us find the shortest path between two stations. For example, if someone wants to travel from 
-        Central Square to Residential Area, the algorithm finds the route:
-        <i>Central Square → Tech Park → Education Hub → Residential Area</i>, which is <b>18 km</b>.
-    </p>
-    <p>
-        How it works:
-        <ul>
-            <li>It starts at the first station (e.g., Central Square).</li>
-            <li>It looks at all the connected stations and picks the closest one (shortest distance).</li>
-            <li>It repeats this for every station until the destination is reached.</li>
-        </ul>
-        This helps create routes that save time for passengers.
-    </p>
-
-    <h3>Kruskal's Algorithm</h3>
-    <p>
-        Kruskal’s Algorithm is used to design the metro network with the lowest cost. It connects the stations 
-        using the shortest routes without creating loops. For Aryavarta, the first metro lines were:
-        <i>Central Square → Tech Park → Education Hub → Residential Area → Industrial Zone → City Mall</i>.
-    </p>
-    <p>
-        This method ensures all stations are connected while keeping construction costs low.
-    </p>
-
-    <h3>Bellman-Ford Algorithm</h3>
-    <p>
-        Bellman-Ford Algorithm is used when there might be delays or issues on some routes. It finds the shortest path 
-        between stations while considering any extra travel time (like delays between City Mall and Industrial Zone).
-        It ensures the metro system still works efficiently, even with these problems.
-    </p>
-
-    <h2>Benefits of the Metro System</h2>
-    <p>
-        The metro system will:
-        <ul>
-            <li>Make travel faster for everyone.</li>
-            <li>Reduce traffic on the roads and cut pollution.</li>
-            <li>Connect important places like homes, offices, and schools.</li>
-            <li>Help the city grow in a smart and sustainable way.</li>
-        </ul>
-    </p>
-
-    <h2>Mapping to SDG Goals</h2>
-    <p>
-        This metro system directly supports the United Nations’ Sustainable Development Goal (SDG) 11: Sustainable Cities and Communities. Here’s how:
-        <ul>
-            <li><b>Goal 11.2:</b> Provide safe, affordable, and sustainable transport systems for all. The metro ensures everyone, including people with low incomes, can travel easily.</li>
-            <li><b>Goal 11.6:</b> Reduce the environmental impact of cities. The metro reduces air pollution by lowering the number of cars on the road.</li>
-            <li><b>Goal 11.A:</b> Link urban and rural areas. By connecting key locations, the metro promotes balanced growth and easier access to jobs and education.</li>
-        </ul>
-    </p>
-
-    <h2>Results</h2>
-    <ul>
-        <li>Average travel distance: <b>8.2 km</b>.</li>
-        <li>Key station: <b>Central Square</b>, as it connects to all other areas.</li>
-        <li>The metro design is simple, efficient, and cost-effective.</li>
-    </ul>
+    <header>
+        <h1>Case Study 1: Metro Public Transportation</h1>
+        <p>By Kushal Koujalagi</p>
+    </header>
+    <section>
+        <h2>Overview</h2>
+        <p>
+            Aryavarta is a growing city. Traffic is becoming a big problem because there are too many vehicles on the road. 
+            A metro system is being planned to connect important areas like Central Square, Tech Park, City Mall, Education Hub, Industrial Zone, and Residential Area. 
+            This will help people travel faster and reduce traffic on the roads.
+        </p>
+        <h2>Metro Map Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Station</th>
+                    <th>Connections</th>
+                    <th>Distance (km)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Central Square</b></td>
+                    <td>Tech Park, City Mall</td>
+                    <td>5, 8</td>
+                </tr>
+                <tr>
+                    <td>Tech Park</td>
+                    <td>Central Square, Education Hub</td>
+                    <td>5, 7</td>
+                </tr>
+                <tr>
+                    <td>City Mall</td>
+                    <td>Central Square, Industrial Zone</td>
+                    <td>8, 10</td>
+                </tr>
+                <tr>
+                    <td>Education Hub</td>
+                    <td>Tech Park, Residential Area</td>
+                    <td>7, 6</td>
+                </tr>
+                <tr>
+                    <td>Industrial Zone</td>
+                    <td>City Mall, Residential Area</td>
+                    <td>10, 9</td>
+                </tr>
+                <tr>
+                    <td>Residential Area</td>
+                    <td>Education Hub, Industrial Zone</td>
+                    <td>6, 9</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Algorithms Used</h2>
+        <h3>Dijkstra's Algorithm</h3>
+        <p>
+            This algorithm helps us find the shortest path between two stations. 
+        </p>
+        <h3>Kruskal's Algorithm</h3>
+        <p>
+            Used to design the metro network with the lowest cost.
+        </p>
+        <h3>Bellman-Ford Algorithm</h3>
+        <p>
+            Finds the shortest path while considering delays or extra travel time.
+        </p>
+        <div class="button-container">
+            <a href="dijkstra_algorithm_code.html" target="_blank">View Dijkstra's Algorithm Code</a>
+            <a href="kruskal_algorithm_code.html" target="_blank">View Kruskal's Algorithm Code</a>
+            <a href="bellman_ford_algorithm_code.html" target="_blank">View Bellman-Ford Algorithm Code</a>
+        </div>
+    </section>
 </body>
 </html>
