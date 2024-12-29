@@ -22,22 +22,26 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2.5em;
         }
         header p {
             font-size: 1em;
             margin-top: 5px;
         }
-        section {
-            margin: 40px auto;
+        .container {
+            margin: 20px auto;
             padding: 30px;
-            max-width: 900px;
+            max-width: 100%;
+        }
+        section {
+            margin: 20px auto;
+            padding: 30px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 15px;
             color: #004080;
             border-bottom: 2px solid #e6f7ff;
@@ -57,22 +61,47 @@
         strong {
             color: #004080;
         }
+        /* Button Styling */
+        .button-container {
+            margin: 40px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .course-project-button {
+            background: linear-gradient(135deg, #004080, #0066cc);
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .course-project-button:hover {
+            background: linear-gradient(135deg, #003366, #005bb5);
+        }
         /* Responsive Design */
         @media (max-width: 768px) {
-            section {
-                margin: 20px;
+            header h1 {
+                font-size: 2em;
+            }
+            .container {
                 padding: 20px;
             }
-            header h1 {
-                font-size: 1.8em;
+            section {
+                padding: 20px;
             }
-            header p {
-                font-size: 0.9em;
+            .course-project-button {
+                font-size: 1em;
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
-      <body>
+<body>
     <header>
         <h1>Design and Analysis of Algorithms</h1>
         <p>Welcome to our project portfolio! Embark on a journey with us where we explore the world of algorithms.</p>
@@ -87,21 +116,19 @@
             </div>
             <div>
                 <h3>Studied Data structures and algorithms</h3>
-                <p>Throughout this course, we explored a variety of data structures, starting with basics like arrays, linked lists, stacks, queues, trees, and graphs, and advancing to more complex ones such as AVL Trees, Red-Black Trees, and Segment Trees. On the algorithmic side, we learned techniques like recursion, backtracking, divide and conquer, dynamic programming, and greedy methods. We also applied these concepts through algorithms such as Quick Sort, Merge Sort, Heap Sort, KMP string matching, Rabin-Karp, Dijkstra's shortest path, and Prim's minimum spanning tree etc, which gave us hands-on experience in solving different types of problems.</p>
+                <p>Throughout this course, we explored a variety of data structures, starting with basics like arrays, linked lists, stacks, queues, trees, and graphs, and advancing to more complex ones such as AVL Trees, Red-Black Trees, and Segment Trees. On the algorithmic side, we learned techniques like recursion, backtracking, divide and conquer, dynamic programming, and greedy methods. We also applied these concepts through algorithms such as Quick Sort, Merge Sort, Heap Sort, KMP string matching, Rabin-Karp, Dijkstra's shortest path, and Prim's minimum spanning tree, which gave us hands-on experience in solving different types of problems.</p>
             </div>
             <div>
-                <h3>How do we connect the course with real time applications?</h3>
+                <h3>How do we connect the course with real-time applications?</h3>
                 <p>Algorithms are everywhere in our daily lives. Search engines use graph algorithms to show relevant results, and online shopping platforms use sorting and searching algorithms to suggest products. Social media relies on pattern-matching algorithms to filter content. Algorithms are also crucial in fields like artificial intelligence, cybersecurity, and bioinformatics.
 
-By the end of the course, we gain the skills to design efficient algorithms, analyze their performance, and solve real-world problems effectively.
-
-</p>
+By the end of the course, we gain the skills to design efficient algorithms, analyze their performance, and solve real-world problems effectively.</p>
             </div>
         </section>
     </div>
 
     <div class="button-container">
-        <a href="courseproject.html" class="course-project-button">Course Project</a>
+        <a href="courseproject.html" class="course-project-button">Explore Course Project</a>
     </div>
 </body>
 </html>
