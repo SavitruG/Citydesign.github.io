@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heap in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Heap in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+void printHeap(vector&lt;int&gt;&amp; heap) {
+    for (int val : heap)
+        cout &lt;&lt; val &lt;&lt; " ";
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    vector&lt;int&gt; heap = {10, 20, 15, 30, 40};
+    make_heap(heap.begin(), heap.end());
+    
+    cout &lt;&lt; "Max Heap: ";
+    printHeap(heap);
+    
+    heap.push_back(50);
+    push_heap(heap.begin(), heap.end());
+    
+    cout &lt;&lt; "Heap after push: ";
+    printHeap(heap);
+    
+    pop_heap(heap.begin(), heap.end());
+    heap.pop_back();
+    
+    cout &lt;&lt; "Heap after pop: ";
+    printHeap(heap);
+    
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
