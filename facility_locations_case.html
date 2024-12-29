@@ -23,6 +23,24 @@
         th {
             background-color: #f4f4f4;
         }
+        .button-container {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-right: 10px;
+            text-decoration: none;
+            background-color: #004080;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .button-container a:hover {
+            background-color: #0059b3;
+        }
     </style>
 </head>
 <body>
@@ -71,33 +89,33 @@
         <p>
             The Floyd-Warshall algorithm is used to calculate the shortest paths between all areas in Aryavarta. It identifies the central locations that reduce travel time for residents. For example, this algorithm helps decide where hospitals or police stations should be placed so that no area is more than 15 minutes away.
         </p>
-        <p>
-            By reducing travel time, this algorithm ensures that residents receive faster medical attention and emergency services, improving their safety and well-being.
-        </p>
+        <div class="button-container">
+            <a href="floyd_warshall_algorithm_code.html" target="_blank">View Floyd-Warshall Algorithm Code</a>
+        </div>
 
         <h3>2. AVL Tree</h3>
         <p>
             The AVL Tree is a data structure used to store and manage information about areas, such as population density and proximity to other neighborhoods. It keeps data sorted and allows quick access and updates.
         </p>
-        <p>
-            Using an AVL Tree ensures that decisions about facility placement are based on up-to-date and efficiently managed data. This improves decision-making and optimizes resource allocation.
-        </p>
+        <div class="button-container">
+            <a href="avl_tree_code.html" target="_blank">View AVL Tree Code</a>
+        </div>
 
         <h3>3. Sorting</h3>
         <p>
             Sorting is used to rank potential facility locations based on factors like population density and centrality. For example, densely populated areas are given higher priority for facilities.
         </p>
-        <p>
-            By ranking locations, sorting ensures that facilities are placed where they are needed the most, reducing overcrowding and enhancing accessibility.
-        </p>
+        <div class="button-container">
+            <a href="sorting_algorithm_code.html" target="_blank">View Sorting Algorithm Code</a>
+        </div>
 
         <h3>4. Depth-First Search (DFS)</h3>
         <p>
             DFS is used to check the connectivity of different areas in Aryavarta. It ensures that all neighborhoods are accessible from the selected facility locations.
         </p>
-        <p>
-            This algorithm guarantees that no area is isolated, improving overall access to essential services.
-        </p>
+        <div class="button-container">
+            <a href="dfs_algorithm_code.html" target="_blank">View DFS Algorithm Code</a>
+        </div>
 
         <h2>Results</h2>
         <p>
@@ -125,23 +143,6 @@
         <h2>Conclusion</h2>
         <p>
             The use of algorithms such as Floyd-Warshall, AVL Trees, sorting, and DFS ensures efficient and equitable placement of facilities in Aryavarta. These methods improve accessibility, reduce response times, and enhance the quality of life for all residents.
-        </p>
-        <h2>Mapping to SDG Goal 11</h2>
-        <p>
-            This business case aligns with Sustainable Development Goal (SDG) 11: "Make cities and human settlements inclusive, safe, resilient, and sustainable." The application of advanced algorithms ensures efficient urban planning and service delivery in Aryavarta. The following aspects of SDG 11 are achieved:
-        </p>
-        <ul>
-            <li><strong>Accessible and Sustainable Urban Infrastructure:</strong> The placement of hospitals and police stations reduces response times and ensures essential services are available to all residents, making Aryavarta inclusive and resilient.</li>
-            <li><strong>Reduced Inequalities:</strong> Algorithms like Floyd-Warshall and DFS ensure that no area is isolated, providing equitable access to facilities for both densely populated and remote regions.</li>
-            <li><strong>Resilient Urban Planning:</strong> AVL Trees and Sorting optimize resource allocation, enabling effective decision-making for future growth and adaptability of the city.</li>
-        </ul>
-        <p>
-            These efforts create a city that prioritizes safety, accessibility, and sustainability, contributing directly to SDG 11's objectives.
-        </p>
-
-        <h2>Conclusion</h2>
-        <p>
-            The use of algorithms such as Floyd-Warshall, AVL Trees, sorting, and DFS ensures efficient and equitable placement of facilities in Aryavarta. These methods improve accessibility, reduce response times, and enhance the quality of life for all residents while aligning with the goals of sustainable urban development as outlined in SDG 11.
         </p>
     </article>
 </body>
