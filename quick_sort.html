@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quick Sort in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int partition(vector&lt;int&gt;&amp; arr, int low, int high) {
+    int pivot = arr[high];
+    int i = low - 1;
+    
+    for (int j = low; j &lt; high; j++) {
+        if (arr[j] &lt;= pivot) {
+            i++;
+            swap(arr[i], arr[j]);
+        }
+    }
+    swap(arr[i + 1], arr[high]);
+    return i + 1;
+}
+
+void quickSort(vector&lt;int&gt;&amp; arr, int low, int high) {
+    if (low &lt; high) {
+        int pi = partition(arr, low, high);
+        
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+void printArray(const vector&lt;int&gt;&amp; arr) {
+    for (int val : arr)
+        cout &lt;&lt; val &lt;&lt; " ";
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    vector&lt;int&gt; arr = {10, 7, 8, 9, 1, 5};
+    
+    cout &lt;&lt; "Unsorted Array: ";
+    printArray(arr);
+    
+    quickSort(arr, 0, arr.size() - 1);
+    
+    cout &lt;&lt; "Sorted Array: ";
+    printArray(arr);
+    
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
