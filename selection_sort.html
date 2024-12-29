@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Selection Sort in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+void selectionSort(vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    for (int i = 0; i &lt; n - 1; i++) {
+        int minIndex = i;
+        
+        // Find the smallest element in the unsorted part
+        for (int j = i + 1; j &lt; n; j++) {
+            if (arr[j] &lt; arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        
+        // Swap the found minimum element with the first element
+        swap(arr[i], arr[minIndex]);
+    }
+}
+
+void printArray(const vector&lt;int&gt;&amp; arr) {
+    for (int val : arr)
+        cout &lt;&lt; val &lt;&lt; " ";
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    vector&lt;int&gt; arr = {64, 25, 12, 22, 11};
+    
+    cout &lt;&lt; "Unsorted Array: ";
+    printArray(arr);
+    
+    selectionSort(arr);
+    
+    cout &lt;&lt; "Sorted Array: ";
+    printArray(arr);
+    
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
