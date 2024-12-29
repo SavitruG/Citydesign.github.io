@@ -27,15 +27,25 @@
         h3 {
             color: #444;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-        p {
-            margin: 10px 0;
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
         }
-        .section {
-            margin-bottom: 40px;
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
         }
         .button-container {
             margin-top: 10px;
@@ -79,24 +89,80 @@
                     <div class="button-container">
                         <a class="btn" href="bubble_sort.html" target="_blank">Code Link</a>
                     </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Input Materials (in tons)</th>
+                                <th>Sorted Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5, 3, 8, 4, 2</td>
+                                <td>2, 3, 4, 5, 8</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </li>
                 <li>
                     <strong>Quick Sort:</strong> A faster alternative to Bubble Sort, Quick Sort organizes large volumes of recyclable materials efficiently.
                     <div class="button-container">
                         <a class="btn" href="quick_sort.html" target="_blank">Code Link</a>
                     </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Input Materials (in tons)</th>
+                                <th>Sorted Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15, 2, 9, 4, 10</td>
+                                <td>2, 4, 9, 10, 15</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </li>
                 <li>
                     <strong>Kruskal’s Algorithm:</strong> Optimize waste management networks by establishing the most cost-effective connections.
                     <div class="button-container">
                         <a class="btn" href="kruskal_code.html" target="_blank">Code Link</a>
                     </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Connection Points</th>
+                                <th>Optimal Connections</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A-B, B-C, C-D, D-A</td>
+                                <td>A-B, B-C, C-D</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </li>
                 <li>
                     <strong>Insertion Sort:</strong> Manage and sort waste input batches to improve efficiency and safety during processing.
                     <div class="button-container">
                         <a class="btn" href="insertion_sort.html" target="_blank">Code Link</a>
                     </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Input Batch (ton)</th>
+                                <th>Sorted Batch</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10, 2, 15, 5, 12</td>
+                                <td>2, 5, 10, 12, 15</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </li>
             </ul>
 
@@ -107,12 +173,40 @@
                     <div class="button-container">
                         <a class="btn" href="selection_sort.html" target="_blank">Code Link</a>
                     </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Energy Efficiency Ratings</th>
+                                <th>Sorted Machines</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>6, 8, 3, 9, 5</td>
+                                <td>3, 5, 6, 8, 9</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </li>
                 <li>
                     <strong>Brute Force String Search:</strong> Identify patterns in datasets for better material selection and inventory management.
                     <div class="button-container">
                         <a class="btn" href="bfss.html" target="_blank">Code Link</a>
                     </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data to Search</th>
+                                <th>Pattern Match Found</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"ABCDEF", "BCD"</td>
+                                <td>Match Found at Position 1</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </li>
             </ul>
         </div>
