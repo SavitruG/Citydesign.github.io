@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study 1: Metro Public Transportation in Aryavarta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Case Study 1: Metro Public Transportation in Aryavarta</h1>
+    <p>
+        Aryavarta has developed a metro system to help people travel across the city quickly and efficiently.
+        The metro connects important areas like Central Square (a circular hub), Tech Park, City Mall, Education Hub,
+        Industrial Zone, and Residential Area.
+    </p>
+
+    <h2>Problem to Solve</h2>
+    <p>
+        We need to find the fastest routes between metro stations and ensure the system works smoothly.
+        Algorithms like Dijkstra and Floyd-Warshall are used to calculate the shortest paths, find average travel distances,
+        and check if the network is efficient.
+    </p>
+
+    <h2>Metro Map Data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Station</th>
+                <th>Connections</th>
+                <th>Distance (km)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Central Square</b></td>
+                <td>Tech Park, City Mall</td>
+                <td>5, 8</td>
+            </tr>
+            <tr>
+                <td>Tech Park</td>
+                <td>Central Square, Education Hub</td>
+                <td>5, 7</td>
+            </tr>
+            <tr>
+                <td>City Mall</td>
+                <td>Central Square, Industrial Zone</td>
+                <td>8, 10</td>
+            </tr>
+            <tr>
+                <td>Education Hub</td>
+                <td>Tech Park, Residential Area</td>
+                <td>7, 6</td>
+            </tr>
+            <tr>
+                <td>Industrial Zone</td>
+                <td>City Mall, Residential Area</td>
+                <td>10, 9</td>
+            </tr>
+            <tr>
+                <td>Residential Area</td>
+                <td>Education Hub, Industrial Zone</td>
+                <td>6, 9</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>How Algorithms Help</h2>
+    <p>
+        The metro system is shown as a graph. Stations are circles (nodes), and routes are the lines between them.
+    </p>
+    <ul>
+        <li><b>Dijkstra's Algorithm</b>: Finds the shortest path from one station to another.</li>
+        <li><b>Floyd-Warshall Algorithm</b>: Finds the shortest distance between every station.</li>
+        <li><b>Bellman-Ford Algorithm</b>: Handles routes with possible delays or discounts.</li>
+        <li><b>Heap</b>: Optimizes Dijkstra's Algorithm for better performance.</li>
+        <li><b>Union-Find</b>: Checks if the metro network is connected during maintenance or upgrades.</li>
+        <li><b>Kruskal's Algorithm</b>: Designs the minimum-cost initial metro network.</li>
+        <li><b>Prim's Algorithm</b>: Builds an efficient spanning tree for the network.</li>
+        <li><b>DFS (Depth-First Search)</b>: Explores the network and finds cycles.</li>
+        <li><b>BFS (Breadth-First Search)</b>: Calculates unweighted shortest paths for simple cases.</li>
+        <li><b>Trie</b>: Stores station names for fast search and suggestions.</li>
+        <li><b>AVL Tree</b>: Keeps data like passenger counts balanced for quick access.</li>
+        <li><b>Sparse Table</b>: Preprocesses distances for fast range queries.</li>
+        <li><b>Hashing</b>: Indexes metro schedules and routes for quick retrieval.</li>
+        <li><b>Merge Sort</b>: Sorts station data for report generation.</li>
+    </ul>
+
+    <h2>Example</h2>
+    <p>
+        The shortest path from <b>Central Square</b> to <b>Residential Area</b> is:
+        <i>Central Square → Tech Park → Education Hub → Residential Area</i>, covering <b>18 km</b>.
+    </p>
+
+    <h2>Results</h2>
+    <ul>
+        <li>Average travel distance: <b>8.2 km</b>.</li>
+        <li>Most important station: <b>Central Square</b>.</li>
+        <li>Efficient routes help people save time and reduce traffic.</li>
+    </ul>
+</body>
+</html>
