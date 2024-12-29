@@ -3,130 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study 1: Facility Placement in Aryavarta</title>
+    <title>Case Study 1: Metro Public Transportation in Aryavarta</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        th, td {
+        table, th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+        }
+        th, td {
+            padding: 10px;
             text-align: center;
         }
         th {
             background-color: #f4f4f4;
-        }
-        h1, h2, h3 {
-            color: #004080;
+            font-weight: bold;
         }
         ul {
-            list-style-type: square;
-            margin-left: 20px;
+            padding-left: 20px;
+            list-style-type: disc;
         }
-        .button-container {
+        p, ul {
             margin: 10px 0;
         }
-        .button-container a {
+        a {
             display: inline-block;
-            padding: 8px 15px;
-            margin-right: 10px;
-            text-decoration: none;
-            background-color: #004080;
+            padding: 10px 15px;
+            margin: 10px 0;
+            background-color: #3498db;
             color: white;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
         }
-        .button-container a:hover {
-            background-color: #0059b3;
+        a:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
-    <h1>Case Study 1: Facility Placement in Aryavarta</h1>
-
-    <h2>Problem Statement</h2>
+    <h1>Case Study 1: Metro Public Transportation in Aryavarta</h1>
     <p>
-        Aryavarta faces challenges in ensuring equitable access to essential services like healthcare and public safety. 
-        The task is to determine the optimal placement of facilities such as hospitals and police stations using efficient algorithms.
+        Aryavarta is a growing city. Traffic is becoming a big problem because there are too many vehicles on the road. 
+        A metro system is being planned to connect important areas like Central Square, Tech Park, City Mall, Education Hub, Industrial Zone, and Residential Area. 
+        This will help people travel faster and reduce traffic on the roads.
     </p>
 
-    <h2>Algorithms Used</h2>
-
-    <h3>1. Floyd-Warshall Algorithm</h3>
-    <ul>
-        <li><strong>Purpose:</strong> Find the shortest paths between all pairs of locations in the city.</li>
-        <li><strong>Use:</strong> Helps identify central points for facility placement to minimize travel time.</li>
-        <li><strong>Impact:</strong> Reduces response times in emergencies.</li>
-    </ul>
-    <div class="button-container">
-        <a href="floyd_warshall_code.html" target="_blank">View Floyd-Warshall Code</a>
-    </div>
-
-    <h3>2. AVL Tree</h3>
-    <ul>
-        <li><strong>Purpose:</strong> Manage population data efficiently.</li>
-        <li><strong>Use:</strong> Stores and retrieves population densities to prioritize areas for facilities.</li>
-        <li><strong>Impact:</strong> Enables dynamic updates and efficient decision-making.</li>
-    </ul>
-    <div class="button-container">
-        <a href="avl_tree_code.html" target="_blank">View AVL Tree Code</a>
-    </div>
-
-    <h3>3. Sorting</h3>
-    <ul>
-        <li><strong>Purpose:</strong> Rank locations based on priority factors such as population density.</li>
-        <li><strong>Use:</strong> Ensures high-priority areas are considered first for facility placement.</li>
-        <li><strong>Impact:</strong> Optimizes resource allocation.</li>
-    </ul>
-    <div class="button-container">
-        <a href="sorting_algorithm_code.html" target="_blank">View Sorting Algorithm Code</a>
-    </div>
-
-    <h3>4. Depth-First Search (DFS)</h3>
-    <ul>
-        <li><strong>Purpose:</strong> Ensure connectivity of the city graph.</li>
-        <li><strong>Use:</strong> Verifies that no area is isolated from essential services.</li>
-        <li><strong>Impact:</strong> Promotes equitable access across the city.</li>
-    </ul>
-    <div class="button-container">
-        <a href="dfs_algorithm_code.html" target="_blank">View DFS Algorithm Code</a>
-    </div>
-
-    <h2>Results</h2>
+    <h2>Why These Places Were Chosen</h2>
     <p>
-        The application of these algorithms identified the following facility locations:
+        The metro system focuses on places that are important for daily life:
+        <ul>
+            <li><b>Central Square:</b> The main area for city events and public services.</li>
+            <li><b>Tech Park:</b> Where many people work in IT companies.</li>
+            <li><b>City Mall:</b> A popular shopping and entertainment spot.</li>
+            <li><b>Education Hub:</b> Schools and colleges are located here.</li>
+            <li><b>Industrial Zone:</b> Where factories and businesses are based.</li>
+            <li><b>Residential Area:</b> Where most people live.</li>
+        </ul>
     </p>
+
+    <h2>Metro Map Data</h2>
     <table>
         <thead>
             <tr>
-                <th>Facility</th>
-                <th>Locations</th>
+                <th>Station</th>
+                <th>Connections</th>
+                <th>Distance (km)</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Hospitals</td>
-                <td>Sector 5, Sector 12, Sector 20</td>
+                <td><b>Central Square</b></td>
+                <td>Tech Park, City Mall</td>
+                <td>5, 8</td>
             </tr>
             <tr>
-                <td>Police Stations</td>
-                <td>Sector 3, Sector 15, Sector 27</td>
+                <td>Tech Park</td>
+                <td>Central Square, Education Hub</td>
+                <td>5, 7</td>
+            </tr>
+            <tr>
+                <td>City Mall</td>
+                <td>Central Square, Industrial Zone</td>
+                <td>8, 10</td>
+            </tr>
+            <tr>
+                <td>Education Hub</td>
+                <td>Tech Park, Residential Area</td>
+                <td>7, 6</td>
+            </tr>
+            <tr>
+                <td>Industrial Zone</td>
+                <td>City Mall, Residential Area</td>
+                <td>10, 9</td>
+            </tr>
+            <tr>
+                <td>Residential Area</td>
+                <td>Education Hub, Industrial Zone</td>
+                <td>6, 9</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>Link to SDG Goal 11</h2>
+    <h2>Algorithms Used</h2>
+
+    <h3>Dijkstra's Algorithm</h3>
     <p>
-        This case study aligns with Sustainable Development Goal 11: Sustainable Cities and Communities. 
-        The optimized facility placement enhances accessibility, reduces inequalities, and fosters a resilient urban environment.
+        This algorithm helps us find the shortest path between two stations. For example, if someone wants to travel from 
+        Central Square to Residential Area, the algorithm finds the route:
+        <i>Central Square &rarr; Tech Park &rarr; Education Hub &rarr; Residential Area</i>, which is <b>18 km</b>.
     </p>
+    <p>
+        How it works:
+        <ul>
+            <li>It starts at the first station (e.g., Central Square).</li>
+            <li>It looks at all the connected stations and picks the closest one (shortest distance).</li>
+            <li>It repeats this for every station until the destination is reached.</li>
+        </ul>
+        This helps create routes that save time for passengers.
+    </p>
+
+    <h3>Kruskal's Algorithm</h3>
+    <p>
+        Kruskal’s Algorithm is used to design the metro network with the lowest cost. It connects the stations 
+        using the shortest routes without creating loops. For Aryavarta, the first metro lines were:
+        <i>Central Square &rarr; Tech Park &rarr; Education Hub &rarr; Residential Area &rarr; Industrial Zone &rarr; City Mall</i>.
+    </p>
+    <p>
+        This method ensures all stations are connected while keeping construction costs low.
+    </p>
+
+    <h3>Bellman-Ford Algorithm</h3>
+    <p>
+        Bellman-Ford Algorithm is used when there might be delays or issues on some routes. It finds the shortest path 
+        between stations while considering any extra travel time (like delays between City Mall and Industrial Zone).
+        It ensures the metro system still works efficiently, even with these problems.
+    </p>
+
+    <h2>Benefits of the Metro System</h2>
+    <p>
+        The metro system will:
+        <ul>
+            <li>Make travel faster for everyone.</li>
+            <li>Reduce traffic on the roads and cut pollution.</li>
+            <li>Connect important places like homes, offices, and schools.</li>
+            <li>Help the city grow in a smart and sustainable way.</li>
+        </ul>
+    </p>
+
+    <h2>Mapping to SDG Goals</h2>
+    <p>
+        This metro system directly supports the United Nations’ Sustainable Development Goal (SDG) 11: Sustainable Cities and Communities. Here’s how:
+        <ul>
+            <li><b>Goal 11.2:</b> Provide safe, affordable, and sustainable transport systems for all. The metro ensures everyone, including people with low incomes, can travel easily.</li>
+            <li><b>Goal 11.6:</b> Reduce the environmental impact of cities. The metro reduces air pollution by lowering the number of cars on the road.</li>
+            <li><b>Goal 11.A:</b> Link urban and rural areas. By connecting key locations, the metro promotes balanced growth and easier access to jobs and education.</li>
+        </ul>
+    </p>
+
+    <h2>Results</h2>
+    <ul>
+        <li>Average travel distance: <b>8.2 km</b>.</li>
+        <li>Key station: <b>Central Square</b>, as it connects to all other areas.</li>
+        <li>The metro design is simple, efficient, and cost-effective.</li>
+    </ul>
 </body>
 </html>
