@@ -9,6 +9,10 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
         }
         table {
             width: 100%;
@@ -25,21 +29,28 @@
         th {
             background-color: #f4f4f4;
         }
+        ul {
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Case Study 1: Metro Public Transportation in Aryavarta</h1>
     <p>
-        Aryavarta has developed a metro system to help people travel across the city quickly and efficiently.
-        The metro connects important areas like Central Square (a circular hub), Tech Park, City Mall, Education Hub,
-        Industrial Zone, and Residential Area.
+        Aryavarta is growing rapidly, and traffic congestion is becoming a major issue. A metro system has been proposed to connect key areas: Central Square, Tech Park, City Mall, Education Hub, Industrial Zone, and Residential Area. The goal is to reduce travel time, ease road traffic, and make commuting more sustainable.
     </p>
 
-    <h2>Problem to Solve</h2>
+    <h2>How Locations Were Decided</h2>
     <p>
-        We need to find the fastest routes between metro stations and ensure the system works smoothly.
-        Algorithms like Dijkstra and Floyd-Warshall are used to calculate the shortest paths, find average travel distances,
-        and check if the network is efficient.
+        Locations were chosen based on their importance in city life:
+        <ul>
+            <li><b>Central Square:</b> The city's hub for public services and entertainment.</li>
+            <li><b>Tech Park:</b> A center for IT companies and employment opportunities.</li>
+            <li><b>City Mall:</b> A popular shopping and leisure destination.</li>
+            <li><b>Education Hub:</b> An area with schools and universities.</li>
+            <li><b>Industrial Zone:</b> Key for manufacturing and trade.</li>
+            <li><b>Residential Area:</b> A densely populated neighborhood.</li>
+        </ul>
     </p>
 
     <h2>Metro Map Data</h2>
@@ -85,38 +96,47 @@
         </tbody>
     </table>
 
-    <h2>How Algorithms Help</h2>
-    <p>
-        The metro system is shown as a graph. Stations are circles (nodes), and routes are the lines between them.
-    </p>
-    <ul>
-        <li><b>Dijkstra's Algorithm</b>: Finds the shortest path from one station to another.</li>
-        <li><b>Floyd-Warshall Algorithm</b>: Finds the shortest distance between every station.</li>
-        <li><b>Bellman-Ford Algorithm</b>: Handles routes with possible delays or discounts.</li>
-        <li><b>Heap</b>: Optimizes Dijkstra's Algorithm for better performance.</li>
-        <li><b>Union-Find</b>: Checks if the metro network is connected during maintenance or upgrades.</li>
-        <li><b>Kruskal's Algorithm</b>: Designs the minimum-cost initial metro network.</li>
-        <li><b>Prim's Algorithm</b>: Builds an efficient spanning tree for the network.</li>
-        <li><b>DFS (Depth-First Search)</b>: Explores the network and finds cycles.</li>
-        <li><b>BFS (Breadth-First Search)</b>: Calculates unweighted shortest paths for simple cases.</li>
-        <li><b>Trie</b>: Stores station names for fast search and suggestions.</li>
-        <li><b>AVL Tree</b>: Keeps data like passenger counts balanced for quick access.</li>
-        <li><b>Sparse Table</b>: Preprocesses distances for fast range queries.</li>
-        <li><b>Hashing</b>: Indexes metro schedules and routes for quick retrieval.</li>
-        <li><b>Merge Sort</b>: Sorts station data for report generation.</li>
-    </ul>
+    <h2>Algorithms Used</h2>
 
-    <h2>Example</h2>
+    <h3>Dijkstra's Algorithm</h3>
     <p>
-        The shortest path from <b>Central Square</b> to <b>Residential Area</b> is:
-        <i>Central Square → Tech Park → Education Hub → Residential Area</i>, covering <b>18 km</b>.
+        This algorithm finds the shortest path between two stations. For example, to travel from Central Square to Residential Area, Dijkstra's Algorithm calculates the following path:
+        <i>Central Square → Tech Park → Education Hub → Residential Area</i>, with a total distance of <b>18 km</b>.
+    </p>
+    <p>
+        The algorithm works by assigning a tentative distance to each station. It starts from the source (e.g., Central Square) and updates the distances of neighboring stations based on the route cost. Once all neighbors are processed, it moves to the next closest station until the destination is reached.
+    </p>
+
+    <h3>Kruskal's Algorithm</h3>
+    <p>
+        Kruskal's Algorithm was used to design the initial metro network at the lowest cost. The algorithm selects routes (edges) with the smallest distances, ensuring that all stations are connected without forming cycles. For Aryavarta, the network started with:
+        <i>Central Square → Tech Park → Education Hub → Residential Area → Industrial Zone → City Mall</i>.
+    </p>
+    <p>
+        This approach minimizes construction costs while ensuring all key areas are reachable.
+    </p>
+
+    <h3>Bellman-Ford Algorithm</h3>
+    <p>
+        Bellman-Ford handles cases where delays might occur on certain routes. It calculates the shortest path from a source station to all other stations, considering any penalties or discounts. For example, if there’s a delay between City Mall and Industrial Zone, the algorithm finds alternative paths to maintain efficiency.
+    </p>
+
+    <h2>Benefits of the Metro System</h2>
+    <p>
+        The proposed metro system addresses several urban issues:
+        <ul>
+            <li>Reduces road traffic and pollution.</li>
+            <li>Offers fast and reliable transportation across the city.</li>
+            <li>Connects residential areas to workplaces, malls, and schools.</li>
+            <li>Promotes sustainable urban development.</li>
+        </ul>
     </p>
 
     <h2>Results</h2>
     <ul>
         <li>Average travel distance: <b>8.2 km</b>.</li>
         <li>Most important station: <b>Central Square</b>.</li>
-        <li>Efficient routes help people save time and reduce traffic.</li>
+        <li>Efficient network design saves time and resources.</li>
     </ul>
 </body>
 </html>
