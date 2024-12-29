@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study 3: Optimized Electricity and Water Management in Aryavarta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        .button-container {
+            margin: 10px 0;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-right: 10px;
+            text-decoration: none;
+            background-color: #004080;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .button-container a:hover {
+            background-color: #0059b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Case Study 3: Optimized Electricity and Water Management in Aryavarta</h1>
     
     <h2>Problem</h2>
-    <p>Efficient distribution of electricity and water is important for Aryavarta's development. The goal is to create a system that ensures fair distribution of resources, finds faults quickly, and reduces waste, using simple yet effective algorithms.</p>
+    <p>
+        Efficient distribution of electricity and water is important for Aryavarta's development. 
+        The goal is to create a system that ensures fair distribution of resources, finds faults quickly, and reduces waste, 
+        using simple yet effective algorithms.
+    </p>
     
     <h2>Algorithms Used</h2>
     
@@ -19,6 +54,9 @@
         <li><strong>Use:</strong> Builds a network that connects all areas at the lowest cost.</li>
         <li><strong>Impact:</strong> Saves money on installation and creates an efficient system.</li>
     </ul>
+    <div class="button-container">
+        <a href="kruskal_algorithm_code.html" target="_blank">View Kruskal’s Algorithm Code</a>
+    </div>
     
     <h3>2. Segment Tree</h3>
     <ul>
@@ -26,6 +64,9 @@
         <li><strong>Use:</strong> Stores the electricity and water use for each area, allowing quick updates and checks.</li>
         <li><strong>Impact:</strong> Helps monitor usage and catch issues like overuse or leaks in real-time.</li>
     </ul>
+    <div class="button-container">
+        <a href="segment_tree_code.html" target="_blank">View Segment Tree Code</a>
+    </div>
     
     <h3>3. Breadth-First Search (BFS)</h3>
     <ul>
@@ -33,11 +74,20 @@
         <li><strong>Use:</strong> Looks for parts of the system that need repair or improvement.</li>
         <li><strong>Impact:</strong> Makes the system more reliable by ensuring quick repairs.</li>
     </ul>
+    <div class="button-container">
+        <a href="bfs_algorithm_code.html" target="_blank">View BFS Algorithm Code</a>
+    </div>
     
     <h2>How It Works</h2>
-    <p><strong>Data Monitoring:</strong> Segment trees track how much electricity and water are being used. This helps quickly spot issues like leaks or overuse.</p>
-    <p><strong>Network Design:</strong> Kruskal’s algorithm builds the distribution system, connecting all sectors in a cost-effective way.</p>
-    <p><strong>Checking the Network:</strong> BFS is used to check the system and find parts that need fixing.</p>
+    <p>
+        <strong>Data Monitoring:</strong> Segment trees track how much electricity and water are being used. This helps quickly spot issues like leaks or overuse.
+    </p>
+    <p>
+        <strong>Network Design:</strong> Kruskal’s algorithm builds the distribution system, connecting all sectors in a cost-effective way.
+    </p>
+    <p>
+        <strong>Checking the Network:</strong> BFS is used to check the system and find parts that need fixing.
+    </p>
     
     <h2>Expected Results</h2>
     <ul>
