@@ -1,80 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rabin-Karp Algorithm in C++</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        pre {
-            background-color: #2e2e2e;
-            color: #f8f8f8;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 16px;
-            line-height: 1.5;
-            overflow-x: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rabin-Karp Algorithm</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    pre {
+      background-color: #2e2e2e;
+      color: #f8f8f8;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      line-height: 1.5;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Rabin-Karp Algorithm in C++</h1>
-    <pre>
-#include &lt;iostream&gt;
-#include &lt<string&gt;
+  <h1>Rabin-Karp Algorithm</h1>
+  
+  <pre>
+#include <iostream>
+#include <string>
+#include <cctype> // for tolower() function
 
 using namespace std;
 
-void rabinKarpSearch(string text, string pattern, int d, int q) {
-    int n = text.length();
-    int m = pattern.length();
-    int h = 1;
-    for (int i = 0; i &lt; m - 1; i++) {
-        h = (h * d) % q;
+// Function to calculate the hash value of a string
+unsigned long long hash(const string& str) {
+  const int d = 256; // Base value for the hash function
+  const unsigned long long q = 1000000007; // A large prime number for modulo operation
+
+  unsigned long long hashValue = 0;
+  for (char c : str) {
+    hashValue = (d * hashValue + tolower(c)) % q; // Hashing with lowercase characters
+  }
+  return hashValue;
+}
+
+// Rabin-Karp search function
+int search(const string& text, const string& pattern) {
+  int n = text.length();
+  int m = pattern.length();
+
+  // Calculate hash values for the pattern and the first window of text
+  unsigned long long pHash = hash(pattern);
+  unsigned long long tHash = hash(text.substr(0, m));
+  const int d = 256; // Base value for the hash function
+
+  // Iterate through the text, sliding the window and comparing hash values
+  for (int i = 0; i <= n - m; i++) {
+    // Check if hash values match
+    if (tHash == pHash) {
+      // If hash values match, compare individual characters for confirmation
+      bool found = true;
+      for (int j = 0; j < m; j++) {
+        if (text[i + j] != pattern[j]) {
+          found = false;
+          break;
+        }
+      }
+      if (found) {
+        return i; // Pattern found at index i
+      }
     }
 
-    int p = 0, t = 0;
-    for (int i = 0; i &lt; m; i++) {
-        p = (d * p + pattern[i]) % q;
-        t = (d * t + text[i]) % q;
+    // Re-calculate hash value for the next window in the text
+    if (i < n - m) {
+      tHash = (d * (tHash - tolower(text[i]) * pow(d, m - 1)) + tolower(text[i + m])) % q;
+      // Recalculate hash efficiently using previously calculated hash
     }
+  }
 
-    for (int s = 0; s &lt;= n - m; s++) {
-        if (p == t) {
-            bool match = true;
-            for (int j = 0; j &lt; m; j++) {
-                if (text[s + j] != pattern[j]) {
-                    match = false;
-                    break;
-                }
-            }
-            if (match) {
-                cout &lt;&lt; "Pattern found at index " &lt;&lt; s &lt;&lt; endl;
-            }
-        }
-        if (s &lt; n - m) {
-            t = (d * (t - text[s] * h) + text[s + m]) % q;
-            if (t &lt; 0) t += q;
-        }
-    }
+  return -1; // Pattern not found
 }
 
 int main() {
-    string text = "GEEKS FOR GEEKS";
-    string pattern = "GEEKS";
-    int d = 256;
-    int q = 101;
+  string text = "THIS IS A TEXT STRING";
+  string pattern = "STRING";
 
-    rabinKarpSearch(text, pattern, d, q);
+  int index = search(text, pattern);
 
-    return 0;
+  if (index != -1) {
+    cout << "Pattern found at index: " << index << endl;
+  } else {
+    cout << "Pattern not found in the text." << endl;
+  }
+
+  return 0;
 }
-    </pre>
+  </pre>
 
 </body>
 </html>
