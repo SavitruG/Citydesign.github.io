@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segment Tree in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Segment Tree Algorithm in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+// Segment Tree class to perform range queries and updates
+class SegmentTree {
+private:
+    vector&lt;int&gt; tree;
+    int n;
+
+    // Build the segment tree
+    void build(const vector&lt;int&gt;&amp; arr, int node, int start, int end) {
+        if (start == end) {
+            tree[node] = arr[start];
+        } else {
+            int mid = (start + end) / 2;
+            build(arr, 2*node + 1, start, mid);
+            build(arr, 2*node + 2, mid + 1, end);
+            tree[node] = tree[2*node + 1] + tree[2*node + 2]; // Sum query (modify for different operations)
+        }
+    }
+
+    // Range query: sum of elements in range [l, r]
+    int query(int node, int start, int end, int l, int r) {
+        if (r &lt; start || end &lt; l) {
+            return 0; // No overlap
+        }
+        if (l &lt;= start && end &lt;= r) {
+            return tree[node]; // Total overlap
+        }
+        int mid = (start + end) / 2;
+        int left_query = query(2*node + 1, start, mid, l, r);
+        int right_query = query(2*node + 2, mid + 1, end, l, r);
+        return left_query + right_query; // Combine results (sum query)
+    }
+
+    // Update a single element
+    void update(int node, int start, int end, int idx, int val) {
+        if (start == end) {
+            tree[node] = val;
+        } else {
+            int mid = (start + end) / 2;
+            if (start &lt;= idx && idx &lt;= mid) {
+                update(2*node + 1, start, mid, idx, val);
+            } else {
+                update(2*node + 2, mid + 1, end, idx, val);
+            }
+            tree[node] = tree[2*node + 1] + tree[2*node + 2]; // Sum query (modify for different operations)
+        }
+    }
+
+public:
+    SegmentTree(const vector&lt;int&gt;&amp; arr) {
+        n = arr.size();
+        tree.resize(4 * n);
+        build(arr, 0, 0, n - 1);
+    }
+
+    // Query the sum in the range [l, r]
+    int query(int l, int r) {
+        return query(0, 0, n - 1, l, r);
+    }
+
+    // Update the element at index idx to value val
+    void update(int idx, int val) {
+        update(0, 0, n - 1, idx, val);
+    }
+};
+
+int main() {
+    vector&lt;int&gt; arr = {1, 3, 5, 7, 9, 11};
+    SegmentTree segTree(arr);
+
+    cout &lt;&lt; "Sum of range [1, 3]: " &lt;&lt; segTree.query(1, 3) &lt;&lt; endl; // Query sum in range [1, 3]
+    
+    segTree.update(1, 10); // Update element at index 1 to 10
+    
+    cout &lt;&lt; "Sum of range [1, 3] after update: " &lt;&lt; segTree.query(1, 3) &lt;&lt; endl; // Query sum again after update
+
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
