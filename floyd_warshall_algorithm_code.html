@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floyd-Warshall Algorithm in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Floyd-Warshall Algorithm in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+void FloydWarshall(vector&lt;vector&lt;int&gt;&gt;&amp; W, int n) {
+    vector&lt;vector&lt;int&gt;&gt; D = W; // Initialize D as the weight matrix W
+
+    for (int k = 0; k &lt; n; ++k) {
+        for (int i = 0; i &lt; n; ++i) {
+            for (int j = 0; j &lt; n; ++j) {
+                D[i][j] = min(D[i][j], D[i][k] + D[k][j]);
+            }
+        }
+    }
+
+    // Print the distance matrix D
+    cout &lt;&lt; "Distance matrix of the shortest paths:\n";
+    for (int i = 0; i &lt; n; ++i) {
+        for (int j = 0; j &lt; n; ++j) {
+            if (D[i][j] == 1e9) {
+                cout &lt;&lt; "INF ";
+            } else {
+                cout &lt;&lt; D[i][j] &lt;&lt; " ";
+            }
+        }
+        cout &lt;&lt; endl;
+    }
+}
+
+int main() {
+    int n = 4; // Number of vertices in the graph
+    vector&lt;vector&lt;int&gt;&gt; W = {
+        {0, 3, 1, 5},
+        {2, 0, 4, 2},
+        {3, 1, 0, 6},
+        {4, 2, 3, 0}
+    };
+
+    FloydWarshall(W, n);
+
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
