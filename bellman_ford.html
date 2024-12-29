@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellman-Ford Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .code-container {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px;
+            overflow-x: auto;
+        }
+        pre {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bellman-Ford Algorithm</h1>
+    <p>The following is an implementation of the Bellman-Ford Algorithm in C++:</p>
+    <div class="code-container">
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;tuple&gt;
+#include &lt;limits&gt;
+
+using namespace std;
+
+const int INF = numeric_limits&lt;int&gt;::max();
+
+void bellmanFord(int vertices, int edges, int source, vector&lt;tuple&lt;int, int, int&gt;&gt; &amp;graph) {
+    vector&lt;int&gt; distance(vertices, INF);
+    distance[source] = 0;
+
+    // Relax edges |V| - 1 times
+    for (int i = 0; i &lt; vertices - 1; ++i) {
+        for (const auto &[u, v, weight] : graph) {
+            if (distance[u] != INF &amp;&amp; distance[u] + weight &lt; distance[v]) {
+                distance[v] = distance[u] + weight;
+            }
+        }
+    }
+
+    // Check for negative-weight cycles
+    for (const auto &[u, v, weight] : graph) {
+        if (distance[u] != INF &amp;&amp; distance[u] + weight &lt; distance[v]) {
+            cout &lt;&lt; "Graph contains a negative-weight cycle" &lt;&lt; endl;
+            return;
+        }
+    }
+
+    // Output distances
+    for (int i = 0; i &lt; vertices; ++i) {
+        if (distance[i] == INF) {
+            cout &lt;&lt; "Distance from " &lt;&lt; source &lt;&lt; " to " &lt;&lt; i &lt;&lt; ": INF" &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; "Distance from " &lt;&lt; source &lt;&lt; " to " &lt;&lt; i &lt;&lt; ": " &lt;&lt; distance[i] &lt;&lt; endl;
+        }
+    }
+}
+
+int main() {
+    int vertices, edges;
+    cout &lt;&lt; "Enter the number of vertices and edges: ";
+    cin &gt;&gt; vertices &gt;&gt; edges;
+
+    vector&lt;tuple&lt;int, int, int&gt;&gt; graph;
+    cout &lt;&lt; "Enter edges (u v weight): " &lt;&lt; endl;
+    for (int i = 0; i &lt; edges; ++i) {
+        int u, v, weight;
+        cin &gt;&gt; u &gt;&gt; v &gt;&gt; weight;
+        graph.emplace_back(u, v, weight);
+    }
+
+    int source;
+    cout &lt;&lt; "Enter the source vertex: ";
+    cin &gt;&gt; source;
+
+    bellmanFord(vertices, edges, source, graph);
+
+    return 0;
+}
+        </pre>
+    </div>
+</body>
+</html>
