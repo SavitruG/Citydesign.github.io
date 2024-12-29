@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brute Force String Search in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Brute Force String Search in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+void bruteForceSearch(const string&amp; text, const string&amp; pattern) {
+    int textLen = text.size();
+    int patternLen = pattern.size();
+    bool found = false;
+
+    for (int i = 0; i &lt;= textLen - patternLen; i++) {
+        int j;
+        for (j = 0; j &lt; patternLen; j++) {
+            if (text[i + j] != pattern[j])
+                break;
+        }
+        
+        if (j == patternLen) {
+            cout &lt;&lt; "Pattern found at index " &lt;&lt; i &lt;&lt; endl;
+            found = true;
+        }
+    }
+
+    if (!found) {
+        cout &lt;&lt; "Pattern not found in the text." &lt;&lt; endl;
+    }
+}
+
+int main() {
+    string text = "ABABABCABABABCABABABC";
+    string pattern = "ABABC";
+
+    cout &lt;&lt; "Text: " &lt;&lt; text &lt;&lt; endl;
+    cout &lt;&lt; "Pattern: " &lt;&lt; pattern &lt;&lt; endl;
+    
+    bruteForceSearch(text, pattern);
+    
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
