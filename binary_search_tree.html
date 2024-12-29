@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Tree in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Binary Search Tree in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int value) {
+        data = value;
+        left = right = nullptr;
+    }
+};
+
+Node* insert(Node* root, int value) {
+    if (!root)
+        return new Node(value);
+
+    if (value &lt; root-&gt;data)
+        root-&gt;left = insert(root-&gt;left, value);
+    else
+        root-&gt;right = insert(root-&gt;right, value);
+
+    return root;
+}
+
+void inorder(Node* root) {
+    if (root) {
+        inorder(root-&gt;left);
+        cout &lt;&lt; root-&gt;data &lt;&lt; " ";
+        inorder(root-&gt;right);
+    }
+}
+
+int main() {
+    Node* root = nullptr;
+    root = insert(root, 10);
+    root = insert(root, 5);
+    root = insert(root, 15);
+    root = insert(root, 2);
+    root = insert(root, 7);
+
+    cout &lt;&lt; "In-order Traversal: ";
+    inorder(root);
+    cout &lt;&lt; endl;
+
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
