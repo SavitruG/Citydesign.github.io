@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Case - Akash Hiremath</title>
+    <style>
+        body {
+            font-family: 'Product Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Problems and Solutions for Budget and Infrastructure</h1>
+        <p></p>
+    </header>
+    <section>
+        <h2>Case Study 1: Sorting Project Quotations by Cost</h2>
+        <p>In the city of Aryavarta, the government plans multiple infrastructure projects and receives quotations from contractors: [₹12,00,000, ₹10,00,000, ₹15,00,000, ₹11,00,000, ₹13,00,000]. The challenge is to identify the most cost-effective contractor efficiently.</p>
+        
+        <h3>Algorithms Used:</h3>
+        <p><b>Merge Sort:</b></p>
+        <p>How It Works: The list is divided into smaller parts, sorted individually, and merged back in order.</p>
+        <p>Example: Split: [₹12,00,000, ₹10,00,000] and [₹15,00,000, ₹11,00,000, ₹13,00,000]. Merge: [₹10,00,000, ₹11,00,000, ₹12,00,000, ₹13,00,000, ₹15,00,000].</p>
+        <p>Result: Contractor B (₹10,00,000) is the most cost-effective.</p>
+
+        <p><b>Quick Sort:</b></p>
+        <p>How It Works: A "pivot" value is chosen (₹12,00,000), and values are rearranged into those less than the pivot and those greater. The process is repeated until the list is sorted.</p>
+        <p>Example: Sorted list: [₹10,00,000, ₹11,00,000, ₹12,00,000, ₹13,00,000, ₹15,00,000].</p>
+        <p>Benefits: Sorting ensures a structured and informed decision-making process, saving costs and time.</p>
+    </section>
+
+    <section>
+        <h2>Case Study 2: Sorting Buildings by Time to Completion</h2>
+        <p>In the city of Aryavarta, five building projects are planned with construction times: [90, 120, 80, 150, 110] days. The goal is to prioritize faster projects to meet deadlines.</p>
+        
+        <h3>Algorithms Used:</h3>
+        <p><b>Heap Sort:</b></p>
+        <p>How It Works: A min-heap is built where the smallest time is placed at the top. Repeatedly extracting the smallest time results in a sorted list.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Building</th>
+                    <th>Time (Days)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Building C</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Building A</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Building E</td>
+                    <td>110</td>
+                </tr>
+                <tr>
+                    <td>Building B</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Building D</td>
+                    <td>150</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Result: Building C (80 days) is prioritized first.</p>
+
+        <p><b>Bubble Sort:</b></p>
+        <p>How It Works: Adjacent values are compared and swapped if needed. After several passes, the list becomes sorted.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Building</th>
+                    <th>Time (Days)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Building C</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Building A</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Building E</td>
+                    <td>110</td>
+                </tr>
+                <tr>
+                    <td>Building B</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Building D</td>
+                    <td>150</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Benefits: Timely completion of projects avoids penalties and improves public satisfaction.</p>
+    </section>
+
+    <section>
+        <h2>Case Study 3: Identifying the Shortest Path for Utility Installation</h2>
+        <p>In Aryavarta, the city plans to install pipelines between six areas with the following distances (in meters):</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Distance (m)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Central Square</td>
+                    <td>Tech Park</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Central Square</td>
+                    <td>City Mall</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Tech Park</td>
+                    <td>Education Hub</td>
+                    <td>700</td>
+                </tr>
+                <tr>
+                    <td>City Mall</td>
+                    <td>Industrial Zone</td>
+                    <td>1,000</td>
+                </tr>
+                <tr>
+                    <td>Education Hub</td>
+                    <td>Residential Area</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Industrial Zone</td>
+                    <td>Residential Area</td>
+                    <td>900</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Algorithms Used:</h3>
+        <p><b>Dijkstra’s Algorithm:</b></p>
+        <p>How It Works: Start from Central Square and calculate the shortest distance to each area. Repeat until all areas are visited.</p>
+        <p>Example: Central Square → Tech Park → Education Hub → Residential Area (total: 1,800 meters).</p>
+
+        <p><b>Bellman-Ford Algorithm:</b></p>
+        <p>How It Works: Relax all edges repeatedly to find the shortest path, considering any delays. The result is the same shortest path as above.</p>
+        <p>Benefits: Efficient utility installation reduces costs and improves service delivery.</p>
+    </section>
+
+    <section>
+        <h2>Case Study 4: Water Pipeline Installation with Minimum Cost</h2>
+        <p>In Aryavarta, the city needs to connect six areas with the following pipeline costs (in INR):</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Cost (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Central Square</td>
+                    <td>Tech Park</td>
+                    <td>₹50,000</td>
+                </tr>
+                <tr>
+                    <td>Central Square</td>
+                    <td>City Mall</td>
+                    <td>₹80,000</td>
+                </tr>
+                <tr>
+                    <td>Tech Park</td>
+                    <td>Education Hub</td>
+                    <td>₹70,000</td>
+                </tr>
+                <tr>
+                    <td>City Mall</td>
+                    <td>Industrial Zone</td>
+                    <td>₹1,00,000</td>
+                </tr>
+                <tr>
+                    <td>Education Hub</td>
+                    <td>Residential Area</td>
+                    <td>₹60,000</td>
+                </tr>
+                <tr>
+                    <td>Industrial Zone</td>
+                    <td>Residential Area</td>
+                    <td>₹90,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Algorithms Used:</h3>
+        <p><b>Kruskal’s Algorithm:</b></p>
+        <p>How It Works: Sort edges by cost and pick the smallest ones without forming loops.</p>
+        <p>Result: Central Square → Tech Park → Education Hub → Residential Area → Industrial Zone → City Mall (total: ₹3,50,000).</p>
+
+        <p><b>Prim’s Algorithm:</b></p>
+        <p>How It Works: Start at any area and connect it to the nearest unvisited area. The result matches Kruskal’s algorithm.</p>
+        <p>Benefits: Minimizing costs allows for better resource allocation.</p>
+    </section>
+
+    <section>
+        <h2>Case Study 5: Scheduling Workers for Tasks</h2>
+        <p>In Aryavarta, the city assigns tasks to workers based on skill levels and task urgencies:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Worker</th>
+                    <th>Skill Level</th>
+                    <th>Task Urgency (1-5)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>3</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>5</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Algorithms Used:</h3>
+        <p><b>Heap Sort:</b></p>
+        <p>How It Works: Create a max-heap based on urgency and skill. Extract the highest priority worker-task pair repeatedly.</p>
+        <p>Result: Task 5 → Worker A, Task 4 → Worker E.</p>
+
+        <p><b>Priority Queue:</b></p>
+        <p>How It Works: Use a queue where high-priority tasks are dequeued first. The result is similar to Heap Sort.</p>
+        <p>Benefits: Efficient scheduling ensures urgent tasks are completed without delays.</p>
+    </section>
+</body>
+</html>
