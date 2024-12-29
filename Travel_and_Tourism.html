@@ -323,6 +323,59 @@
         </table>
         <p><strong>Evacuation Plan (using Floyd-Warshall):</strong> Tourists from Hulipattana (high-risk) will be directed to Kamalanagar (low-risk), and the shortest route to Kamalanagar is 8 km.</p>
         
+        
+        
+        <h3>6.Problem: Searching for Rides in Aryavarta Amusement Park</h3>
+<p>Tourists in Aryavarta Amusement Park want to search for specific rides using keywords. For example, they want to search for rides containing the keyword <strong>"roller"</strong>.</p>
+
+<h3>Solution using Rabin-Karp Algorithm:</h3>
+<p>The Rabin-Karp algorithm efficiently searches for substrings using hashing:</p>
+<ul>
+    <li><strong>Hash the keyword:</strong> Calculate the hash value for the keyword <strong>"roller"</strong>.</li>
+    <li><strong>Calculate hashes for substrings:</strong> For each ride name, calculate the hash for every substring of length equal to the keyword (6 characters).</li>
+    <li><strong>Compare hashes:</strong> Compare the hash of each substring of the ride names with the hash of the keyword <strong>"roller"</strong>.</li>
+    <li><strong>Exact match check:</strong> If the hash values match, check the actual substring characters to confirm the match.</li>
+    <li><strong>Return the ride:</strong> If a match is found, return the corresponding ride name.</li>
+</ul>
+
+<h3>Data: Ride Names and Descriptions</h3>
+<table border="1">
+    <tr>
+        <th>Ride Name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Roller Coaster</td>
+        <td>A high-speed thrill ride with twists and turns.</td>
+    </tr>
+    <tr>
+        <td>Ferris Wheel</td>
+        <td>A giant wheel offering panoramic views of the park.</td>
+    </tr>
+    <tr>
+        <td>Water Slide</td>
+        <td>A fun water ride that splashes you into the pool.</td>
+    </tr>
+    <tr>
+        <td>Haunted House</td>
+        <td>A spooky walk-through experience.</td>
+    </tr>
+    <tr>
+        <td>Bumper Cars</td>
+        <td>Enjoy a fun crash ride in bumper cars.</td>
+    </tr>
+</table>
+
+<p>The Rabin-Karp algorithm helps efficiently search for the keyword "roller" in the ride names, returning the matching ride "Roller Coaster".</p>
+
+<div class="button-container">
+    <a href="rabin_karp.html" class="button">Rabin Karp</a>
+</div>
+
+        
+        
+        <p>                                                                                                                      </p>
+        
         <div class="button-container">
             <a href="codefile.html">Codefile</a>
         </div>
