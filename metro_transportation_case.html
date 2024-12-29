@@ -3,61 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study 1: Metro Public Transportation in Aryavarta</title>
+    <title>Case Study 1: Facility Placement in Aryavarta</title>
     <style>
         body {
-            font-family: 'Product Sans', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e6f7ff;
-        }
-        header {
-            background-color: #004080;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        section {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-        }
-        h1, h2 {
-            color: #333;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
         th, td {
+            border: 1px solid #ddd;
             padding: 8px;
             text-align: center;
         }
         th {
             background-color: #f4f4f4;
         }
+        h1, h2, h3 {
+            color: #004080;
+        }
         ul {
-            padding-left: 20px;
+            list-style-type: square;
+            margin-left: 20px;
         }
         .button-container {
-            text-align: center;
-            margin-top: 20px;
+            margin: 10px 0;
         }
         .button-container a {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 8px 15px;
+            margin-right: 10px;
             text-decoration: none;
             background-color: #004080;
             color: white;
-            border-radius: 5px;
+            border-radius: 4px;
             font-weight: bold;
             transition: background-color 0.3s ease;
-            margin-bottom: 10px;
         }
         .button-container a:hover {
             background-color: #0059b3;
@@ -65,77 +50,83 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Case Study 1: Metro Public Transportation</h1>
-        <p>By Kushal Koujalagi</p>
-    </header>
-    <section>
-        <h2>Overview</h2>
-        <p>
-            Aryavarta is a growing city. Traffic is becoming a big problem because there are too many vehicles on the road. 
-            A metro system is being planned to connect important areas like Central Square, Tech Park, City Mall, Education Hub, Industrial Zone, and Residential Area. 
-            This will help people travel faster and reduce traffic on the roads.
-        </p>
-        <h2>Metro Map Data</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Station</th>
-                    <th>Connections</th>
-                    <th>Distance (km)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>Central Square</b></td>
-                    <td>Tech Park, City Mall</td>
-                    <td>5, 8</td>
-                </tr>
-                <tr>
-                    <td>Tech Park</td>
-                    <td>Central Square, Education Hub</td>
-                    <td>5, 7</td>
-                </tr>
-                <tr>
-                    <td>City Mall</td>
-                    <td>Central Square, Industrial Zone</td>
-                    <td>8, 10</td>
-                </tr>
-                <tr>
-                    <td>Education Hub</td>
-                    <td>Tech Park, Residential Area</td>
-                    <td>7, 6</td>
-                </tr>
-                <tr>
-                    <td>Industrial Zone</td>
-                    <td>City Mall, Residential Area</td>
-                    <td>10, 9</td>
-                </tr>
-                <tr>
-                    <td>Residential Area</td>
-                    <td>Education Hub, Industrial Zone</td>
-                    <td>6, 9</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Algorithms Used</h2>
-        <h3>Dijkstra's Algorithm</h3>
-        <p>
-            This algorithm helps us find the shortest path between two stations. 
-        </p>
-        <h3>Kruskal's Algorithm</h3>
-        <p>
-            Used to design the metro network with the lowest cost.
-        </p>
-        <h3>Bellman-Ford Algorithm</h3>
-        <p>
-            Finds the shortest path while considering delays or extra travel time.
-        </p>
-        <div class="button-container">
-            <a href="dijkstra_algorithm_code.html" target="_blank">View Dijkstra's Algorithm Code</a>
-            <a href="kruskal_algorithm_code.html" target="_blank">View Kruskal's Algorithm Code</a>
-            <a href="bellman_ford_algorithm_code.html" target="_blank">View Bellman-Ford Algorithm Code</a>
-        </div>
-    </section>
+    <h1>Case Study 1: Facility Placement in Aryavarta</h1>
+
+    <h2>Problem Statement</h2>
+    <p>
+        Aryavarta faces challenges in ensuring equitable access to essential services like healthcare and public safety. 
+        The task is to determine the optimal placement of facilities such as hospitals and police stations using efficient algorithms.
+    </p>
+
+    <h2>Algorithms Used</h2>
+
+    <h3>1. Floyd-Warshall Algorithm</h3>
+    <ul>
+        <li><strong>Purpose:</strong> Find the shortest paths between all pairs of locations in the city.</li>
+        <li><strong>Use:</strong> Helps identify central points for facility placement to minimize travel time.</li>
+        <li><strong>Impact:</strong> Reduces response times in emergencies.</li>
+    </ul>
+    <div class="button-container">
+        <a href="floyd_warshall_code.html" target="_blank">View Floyd-Warshall Code</a>
+    </div>
+
+    <h3>2. AVL Tree</h3>
+    <ul>
+        <li><strong>Purpose:</strong> Manage population data efficiently.</li>
+        <li><strong>Use:</strong> Stores and retrieves population densities to prioritize areas for facilities.</li>
+        <li><strong>Impact:</strong> Enables dynamic updates and efficient decision-making.</li>
+    </ul>
+    <div class="button-container">
+        <a href="avl_tree_code.html" target="_blank">View AVL Tree Code</a>
+    </div>
+
+    <h3>3. Sorting</h3>
+    <ul>
+        <li><strong>Purpose:</strong> Rank locations based on priority factors such as population density.</li>
+        <li><strong>Use:</strong> Ensures high-priority areas are considered first for facility placement.</li>
+        <li><strong>Impact:</strong> Optimizes resource allocation.</li>
+    </ul>
+    <div class="button-container">
+        <a href="sorting_algorithm_code.html" target="_blank">View Sorting Algorithm Code</a>
+    </div>
+
+    <h3>4. Depth-First Search (DFS)</h3>
+    <ul>
+        <li><strong>Purpose:</strong> Ensure connectivity of the city graph.</li>
+        <li><strong>Use:</strong> Verifies that no area is isolated from essential services.</li>
+        <li><strong>Impact:</strong> Promotes equitable access across the city.</li>
+    </ul>
+    <div class="button-container">
+        <a href="dfs_algorithm_code.html" target="_blank">View DFS Algorithm Code</a>
+    </div>
+
+    <h2>Results</h2>
+    <p>
+        The application of these algorithms identified the following facility locations:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Facility</th>
+                <th>Locations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hospitals</td>
+                <td>Sector 5, Sector 12, Sector 20</td>
+            </tr>
+            <tr>
+                <td>Police Stations</td>
+                <td>Sector 3, Sector 15, Sector 27</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Link to SDG Goal 11</h2>
+    <p>
+        This case study aligns with Sustainable Development Goal 11: Sustainable Cities and Communities. 
+        The optimized facility placement enhances accessibility, reduces inequalities, and fosters a resilient urban environment.
+    </p>
 </body>
 </html>
