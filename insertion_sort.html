@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Insertion Sort in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+void insertionSort(vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    for (int i = 1; i &lt; n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        
+        // Move elements that are greater than key to one position ahead
+        while (j &gt;= 0 && arr[j] &gt; key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+void printArray(const vector&lt;int&gt;&amp; arr) {
+    for (int val : arr)
+        cout &lt;&lt; val &lt;&lt; " ";
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    vector&lt;int&gt; arr = {12, 11, 13, 5, 6};
+    
+    cout &lt;&lt; "Unsorted Array: ";
+    printArray(arr);
+    
+    insertionSort(arr);
+    
+    cout &lt;&lt; "Sorted Array: ";
+    printArray(arr);
+    
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
