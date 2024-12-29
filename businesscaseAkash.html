@@ -1,240 +1,420 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorithm Design Principles</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Business Case - Akash Hiremath</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f7f6;
+            font-family: 'Product Sans', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
+            background-color: #e6f7ff;
         }
-
-        h1, h2, h3 {
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #ff6347; /* Tomato color for main title */
+        header {
+            background-color: #004080;
+            color: white;
             text-align: center;
-            margin-top: 20px;
+            padding: 20px;
         }
-
-        h2 {
-            font-size: 28px;
-            color: #1e3d58; /* Dark blue for section titles */
-            margin-top: 40px;
-            border-bottom: 3px solid #ff6347; /* Tomato underline */
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 22px;
-            color: #555;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-
-        p, ul, table {
+        section {
             margin: 20px;
-            padding: 10px;
-            line-height: 1.6;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
         }
-
         table {
-            width: 90%;
-            margin: 20px auto;
+            width: 100%;
             border-collapse: collapse;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
         }
-
-        table th, table td {
-            padding: 12px;
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
             text-align: left;
-            border: 1px solid #ddd;
         }
-
-        table th {
-            background-color: #ffedd5; /* Light peach background */
-            font-weight: 600;
-            color: #1e3d58; /* Dark blue text */
-        }
-
-        table td {
-            background-color: #fff;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        table tr:hover {
-            background-color: #ffe6e6; /* Light red hover effect */
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            background-color: #fff;
-            margin: 10px 0;
-            padding: 12px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        ul li:hover {
-            background-color: #ffedd5; /* Light peach background on hover */
-        }
-
-        .content-container {
-            max-width: 1000px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .intro-text {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .section-title {
-            font-size: 22px;
-            color: #ff6347; /* Tomato color */
-            border-bottom: 2px solid #ff6347;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
-
-        .section-content {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 30px;
-        }
-
     </style>
 </head>
 <body>
+    <header>
+        <h1>PROBLEMS AND SOLUTIONS</h1>
+        <p></p>
+    </header>
+    <section>
+        <h2>Optimized Problems and Solutions for Travel and Tourism Management</h2>
 
-    <div class="content-container">
-        <h1>Algorithm Design Principles</h1>
+        <h3>1. Sorting Travel Packages by Cost</h3>
+        <p><strong>Problem:</strong> Sorting multiple travel packages by price to find the most affordable package for tourists. Example prices (converted to INR at 1 USD = 80 INR):</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Price (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Package A</td>
+                    <td>₹120,000</td>
+                </tr>
+                <tr>
+                    <td>Package B</td>
+                    <td>₹96,000</td>
+                </tr>
+                <tr>
+                    <td>Package C</td>
+                    <td>₹144,000</td>
+                </tr>
+                <tr>
+                    <td>Package D</td>
+                    <td>₹104,000</td>
+                </tr>
+                <tr>
+                    <td>Package E</td>
+                    <td>₹80,000</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Solution:</strong> Use the Merge Sort algorithm, which efficiently sorts the travel packages by price in O(n log n) time.</p>
+        <p>After sorting the packages by price:</p>
 
-        <section>
-            <h2 class="section-title">1. Kinds of Problems in Nature</h2>
-            <p class="section-content">Iteration, recursion, and backtracking are natural problem-solving techniques found in nature, such as animal migration patterns or Fibonacci sequences in plants.</p>
-        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Price (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Package E</td>
+                    <td>₹80,000</td>
+                </tr>
+                <tr>
+                    <td>Package B</td>
+                    <td>₹96,000</td>
+                </tr>
+                <tr>
+                    <td>Package D</td>
+                    <td>₹104,000</td>
+                </tr>
+                <tr>
+                    <td>Package A</td>
+                    <td>₹120,000</td>
+                </tr>
+                <tr>
+                    <td>Package C</td>
+                    <td>₹144,000</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <section>
-            <h2 class="section-title">2. Space and Time Efficiency</h2>
-            <p class="section-content">Understanding time and space complexities (like O(1), O(n), O(log n)) helps in optimizing algorithms, ensuring that both time and memory are used efficiently.</p>
-        </section>
+        <h3>2. Sorting Hotels by Rating</h3>
+        <p><strong>Problem:</strong> Sorting hotels by customer ratings to prioritize the highest-rated hotels. Example ratings:</p>
 
-        <section>
-            <h2 class="section-title">3. Takeaways from Different Design Principles</h2>
-            <p class="section-content">Decomposition, pattern recognition, abstraction, pruning, and other principles allow us to break down complex problems and design algorithms efficiently.</p>
-        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hotel</th>
+                    <th>Rating (1-5)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hotel A</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>Hotel B</td>
+                    <td>3.8</td>
+                </tr>
+                <tr>
+                    <td>Hotel C</td>
+                    <td>5.0</td>
+                </tr>
+                <tr>
+                    <td>Hotel D</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <td>Hotel E</td>
+                    <td>4.7</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Solution:</strong> Use the Heap Sort algorithm to efficiently sort the hotels by rating in O(n log n) time.</p>
+        <p>After applying heap sort, the list becomes:</p>
 
-        <section>
-            <h2 class="section-title">4. Hierarchical Data and Tree Structures</h2>
-            <p class="section-content">Tree structures such as binary search trees, AVL trees, and heaps are essential for organizing hierarchical data efficiently.</p>
-        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hotel</th>
+                    <th>Rating (1-5)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hotel C</td>
+                    <td>5.0</td>
+                </tr>
+                <tr>
+                    <td>Hotel E</td>
+                    <td>4.7</td>
+                </tr>
+                <tr>
+                    <td>Hotel A</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>Hotel D</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <td>Hotel B</td>
+                    <td>3.8</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <section>
-            <h2 class="section-title">5. Need for Array Query Algorithms</h2>
-            <p class="section-content">Array query algorithms such as segment trees, Fenwick trees, and sparse tables allow for efficient range queries and updates in large datasets.</p>
-        </section>
+        <h3>3. Finding the Shortest Path for City Tours</h3>
+        <p><strong>Problem:</strong> Finding the shortest route for a city tour. Distances between locations:</p>
 
-        <section>
-            <h2 class="section-title">6. Tree vs Graph Traversals</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Aspect</th>
-                        <th>Tree</th>
-                        <th>Graph</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Structure</td>
-                        <td>Hierarchical, one root, no cycles</td>
-                        <td>Collection of nodes with edges, may have cycles</td>
-                    </tr>
-                    <tr>
-                        <td>Edges</td>
-                        <td>Directed (parent-child)</td>
-                        <td>Directed/Undirected</td>
-                    </tr>
-                    <tr>
-                        <td>Traversal</td>
-                        <td>Preorder, Inorder, Postorder</td>
-                        <td>BFS, DFS</td>
-                    </tr>
-                    <tr>
-                        <td>Cycle Detection</td>
-                        <td>No cycles</td>
-                        <td>Can contain cycles</td>
-                    </tr>
-                    <tr>
-                        <td>Applications</td>
-                        <td>File systems, expression trees</td>
-                        <td>Social networks, network routing</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>From Location</th>
+                    <th>To Location</th>
+                    <th>Distance (km)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>C</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>D</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Solution:</strong> Use Dijkstra’s Algorithm to find the shortest route. The optimal route is:</p>
+        <p>A -> B (2 km) -> B -> C (3 km) -> C -> D (1 km)  
+        <strong>Total distance:</strong> 6 km</p>
 
-        <section>
-            <h2 class="section-title">7. Sorting and Searching Algorithms</h2>
-            <ul>
-                <li><strong>Bubble Sort:</strong> Simple but inefficient for large datasets.</li>
-                <li><strong>Selection Sort:</strong> Efficient for small datasets but poor for larger ones.</li>
-                <li><strong>Insertion Sort:</strong> Best for nearly sorted data.</li>
-                <li><strong>Merge Sort:</strong> Efficient and stable sorting algorithm.</li>
-                <li><strong>Quick Sort:</strong> Faster than merge sort in practice.</li>
-                <li><strong>Heap Sort:</strong> Efficient for priority queues and in-place sorting.</li>
-            </ul>
-        </section>
+        <h3>4. Allocating Resources for Sustainable Tourism</h3>
+        <p><strong>Problem:</strong> Allocating resources for eco-friendly transport, green hotels, and clean energy. Example allocation (converted to INR):</p>
 
-        <section>
-            <h2 class="section-title">8. Importance of Graph Algorithms</h2>
-            <p class="section-content"><strong>Spanning Trees:</strong> Connect all points with the least number of edges, ensuring efficiency in network design.</p>
-            <p><strong>Prim’s Algorithm:</strong> Efficient network expansion by adding the least expensive edges.</p>
-            <p><strong>Kruskal’s Algorithm:</strong> Connects sparse networks without forming cycles.</p>
-            <p><strong>Shortest Path Algorithms:</strong> Dijkstra’s, Bellman-Ford, and Floyd-Warshall help us find the shortest or cheapest route between points.</p>
-        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Resource Type</th>
+                    <th>Allocation (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Eco Transport</td>
+                    <td>₹24,00,000</td>
+                </tr>
+                <tr>
+                    <td>Green Hotels</td>
+                    <td>₹40,00,000</td>
+                </tr>
+                <tr>
+                    <td>Clean Energy</td>
+                    <td>₹16,00,000</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Solution:</strong> Use Kruskal’s Algorithm to allocate resources efficiently, ensuring minimal costs while achieving sustainability goals.</p>
 
-        <section>
-            <h2 class="section-title">9. Algorithm Design Techniques</h2>
-            <p class="section-content">Different approaches for problem-solving include Divide and Conquer, Dynamic Programming, Greedy Algorithms, and more to optimize performance.</p>
-            <ul>
-                <li><strong>Divide and Conquer:</strong> Splits the problem into smaller subproblems.</li>
-                <li><strong>Dynamic Programming:</strong> Solves overlapping subproblems efficiently.</li>
-                <li><strong>Greedy Algorithms:</strong> Makes the best local choice at each step.</li>
-                <li><strong>Backtracking:</strong> Explores and undoes choices to find valid solutions.</li>
-                <li><strong>Branch-and-Bound:</strong> Explores solutions and eliminates non-optimal paths.</li>
-                <li><strong>Randomized Algorithms:</strong> Uses randomness to simplify solutions.</li>
-                <li><strong>Heuristic and Approximation:</strong> Aims for "good enough" solutions.</li>
-            </ul>
-        </section>
-    </div>
+        <h3>5. Scheduling Travel Agents for Tours</h3>
+        <p><strong>Problem:</strong> Scheduling travel agents for various tours based on their availability. Example agent data:</p>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>Agent</th>
+                    <th>Tour Type</th>
+                    <th>Availability (days)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Agent A</td>
+                    <td>City Tour</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Agent B</td>
+                    <td>Nature Tour</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Agent C</td>
+                    <td>Cultural Tour</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Agent D</td>
+                    <td>City Tour</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Solution:</strong> Use Heapify (Heap Sort) to allocate agents based on their availability. After sorting by availability:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Agent</th>
+                    <th>Tour Type</th>
+                    <th>Availability (days)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Agent C</td>
+                    <td>Cultural Tour</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Agent A</td>
+                    <td>City Tour</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Agent D</td>
+                    <td>City Tour</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Agent B</td>
+                    <td>Nature Tour</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>6. Finding Popular Tourist Destinations</h3>
+        <p><strong>Problem:</strong> Finding the most visited tourist destinations in the world. Example data:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Visitors (Millions)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Paris</td>
+                    <td>20.2</td>
+                </tr>
+                <tr>
+                    <td>London</td>
+                    <td>19.5</td>
+                </tr>
+                <tr>
+                    <td>New York</td>
+                    <td>15.9</td>
+                </tr>
+                <tr>
+                    <td>Rome</td>
+                    <td>13.6</td>
+                </tr>
+                <tr>
+                    <td>Tokyo</td>
+                    <td>12.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Solution:</strong> Use Quick Sort to efficiently sort the destinations by number of visitors in O(n log n) time.</p>
+        <p>After sorting by visitors:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Visitors (Millions)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Paris</td>
+                    <td>20.2</td>
+                </tr>
+                <tr>
+                    <td>London</td>
+                    <td>19.5</td>
+                </tr>
+                <tr>
+                    <td>New York</td>
+                    <td>15.9</td>
+                </tr>
+                <tr>
+                    <td>Rome</td>
+                    <td>13.6</td>
+                </tr>
+                <tr>
+                    <td>Tokyo</td>
+                    <td>12.1</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>7. Managing Travel Budget</h3>
+        <p><strong>Problem:</strong> Allocating a travel budget for various categories. Example budget distribution (converted to INR):</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Accommodation</td>
+                    <td>₹30,000</td>
+                </tr>
+                <tr>
+                    <td>Transport</td>
+                    <td>₹15,000</td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>₹10,000</td>
+                </tr>
+                <tr>
+                    <td>Entertainment</td>
+                    <td>₹5,000</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Solution:</strong> Use Dynamic Programming to allocate the budget efficiently, ensuring maximum utilization of resources.</p>
+
+    </section>
 </body>
 </html>
