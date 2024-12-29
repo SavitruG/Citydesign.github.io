@@ -1,111 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Algorithm Concepts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Reflection</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.8;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+        header {
+            background: linear-gradient(135deg, #004080, #0066cc);
+            color: #fff;
+            text-align: center;
+            padding: 30px 10px;
         }
-        h1 {
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 10px;
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        header p {
+            font-size: 1em;
+            margin-top: 5px;
+        }
+        section {
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #004080;
+            border-bottom: 2px solid #e6f7ff;
+            padding-bottom: 5px;
         }
         p {
-            margin: 10px 0;
-            text-indent: 20px;
+            font-size: 1em;
+            margin-bottom: 15px;
         }
         ul {
-            margin: 10px 40px;
+            margin: 15px 0;
+            padding-left: 20px;
         }
-        .section {
-            margin-bottom: 30px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #004080;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                margin: 20px;
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Algorithm Concepts</h1>
+    <header>
+        <h1>Course Reflection</h1>
+        <p>By [Your Name]</p>
+    </header>
 
-    <div class="section">
+    <section>
         <h2>Problems in Nature and How to Solve Them</h2>
         <p>When we look at problems in nature, we see patterns that can be approached using methods like iteration, recursion, and backtracking. Iteration involves solving problems step by step in a sequence, which is straightforward and often efficient. Recursion allows us to break a larger problem into smaller, manageable parts, solving each one in a nested manner. Backtracking, which we explored in problems like the N-Queens puzzle, is a systematic way of exploring all possible solutions and rejecting those that don’t meet the criteria.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Time Efficiency and Its Importance</h2>
         <p>In today’s world, time efficiency is often the most crucial factor when solving problems. We focus on how quickly an algorithm can provide a solution, especially in scenarios where delays can have significant consequences, like real-time applications or competitive programming.</p>
-        <p>Time efficiencies can range from constant time (<code>Ο(1)</code>), where an algorithm’s execution doesn’t depend on input size, to logarithmic time (<code>Ο(log n)</code>), which is very efficient for large datasets (like binary search). Linear time (<code>Ο(n)</code>) algorithms are practical for many problems, as their performance grows proportionally with input size. Quadratic (<code>Ο(n²)</code>) or cubic (<code>Ο(n³)</code>) time algorithms, however, quickly become impractical as the input size increases.</p>
+        <p>Time efficiencies can range from constant time (Ο(1)), where an algorithm’s execution doesn’t depend on input size, to logarithmic time (Ο(log n)), which is very efficient for large datasets (like binary search). Linear time (Ο(n)) algorithms are practical for many problems, as their performance grows proportionally with input size. Quadratic (Ο(n²)) or cubic (Ο(n³)) time algorithms, however, quickly become impractical as the input size increases.</p>
         <p>Understanding these efficiencies has helped me realize why optimizing for time can be the difference between a functional and an unusable solution in the real world.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Designing Algorithms: What I Learned</h2>
         <p>Through our studies, we explored various design techniques. Divide and conquer stood out as a powerful method. By breaking a problem into smaller subproblems, solving each independently, and combining the results, we can significantly improve efficiency. Merge sort is a perfect example of this approach.</p>
         <p>Traversal methods like depth-first search (DFS) and breadth-first search (BFS) taught us how to navigate data structures like graphs and trees. DFS goes deep along one branch before backtracking, making it ideal for exploring all possibilities, such as finding paths in a maze. BFS explores layer by layer and is often better for finding the shortest path in unweighted graphs.</p>
         <p>We also learned about pruning techniques, such as in the N-Queens problem, where eliminating unnecessary options early can save time. Edge relaxation in tree algorithms helped us simplify shortest path calculations, while level-order traversal and parental dominance clarified hierarchical relationships in data structures like heaps.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Trees and Their Applications</h2>
         <p>Trees are a fundamental data structure that we studied in detail. Binary trees provide an organized way to store data, while binary search trees (BSTs) allow efficient searching. However, BSTs can become unbalanced, so we studied AVL and red-black trees, which automatically balance themselves to maintain performance.</p>
         <p>Heaps taught us about parental dominance, where each parent node has a priority over its children. This structure is especially useful for priority queues. Tries were another fascinating topic. These are special trees optimized for string-based operations like prefix searches. While working with tries, we also explored the Boyer-Moore algorithm, which builds on these ideas for efficient pattern matching by skipping unnecessary comparisons during searches.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Segment Trees and Array Queries</h2>
         <p>We delved into segment trees, which are incredibly efficient for range queries and updates. By dividing an array into segments, these trees allow us to answer queries in logarithmic time. However, updating all segments can sometimes be costly, so we learned about lazy propagation. This technique delays updates until absolutely necessary, improving efficiency.</p>
         <p>Lookup tables, another topic we studied, provide instant access to precomputed results. While faster than segment trees for querying, they require significantly more memory, illustrating the trade-offs we often face in algorithm design.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Comparing Trees and Graphs</h2>
         <p>We also explored the differences between trees and graphs. Trees are hierarchical and have a clear root, making them ideal for problems like representing organizational structures or family trees. Graphs, being more general, can represent complex networks such as road maps or social connections.</p>
         <p>Traversal methods like DFS and BFS apply to both, but their purposes differ. In graphs, DFS is excellent for detecting cycles, while BFS works well for finding shortest paths in unweighted graphs. Trees are particularly effective for hierarchical data and scenarios where relationships are one-to-many.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Sorting Algorithms</h2>
         <p>Sorting algorithms were one of the most detailed topics we explored. Each method has its strengths and weaknesses, and understanding these helped us connect them to real-world applications.</p>
-        <h3>Bubble Sort</h3>
-        <p>Bubble sort repeatedly swaps adjacent elements if they are in the wrong order. Although simple, it is very slow (<code>Ο(n²)</code>) for large datasets. It’s useful mainly for educational purposes or very small inputs.</p>
-        <h3>Selection Sort</h3>
-        <p>Selection sort finds the smallest element and places it at the start, repeating this process for the entire list. It’s slightly better than bubble sort but still inefficient (<code>Ο(n²)</code>). Its simplicity makes it useful for small datasets.</p>
-        <h3>Insertion Sort</h3>
-        <p>Insertion sort builds the sorted list one element at a time, making it efficient (<code>Ο(n)</code>) for nearly sorted data. It’s often used in scenarios like card sorting.</p>
-        <h3>Merge Sort</h3>
-        <p>Merge sort uses divide and conquer to break the list into halves, sort each, and merge them. With a time complexity of <code>Ο(n log n)</code>, it’s very efficient and works well for large datasets.</p>
-        <h3>Heap Sort</h3>
-        <p>Heap sort uses a binary heap to sort data. It combines the efficiency of <code>Ο(n log n)</code> with in-place sorting but isn’t stable, meaning it can change the relative order of equal elements.</p>
-    </div>
+        <ul>
+            <li><strong>Bubble Sort:</strong> Repeatedly swaps adjacent elements if they are in the wrong order. Useful mainly for educational purposes or very small inputs.</li>
+            <li><strong>Selection Sort:</strong> Finds the smallest element and places it at the start. It’s simple but inefficient for large datasets.</li>
+            <li><strong>Insertion Sort:</strong> Builds the sorted list one element at a time, making it efficient for nearly sorted data.</li>
+            <li><strong>Merge Sort:</strong> Uses divide and conquer to break the list into halves, sort each, and merge them. Efficient for large datasets.</li>
+            <li><strong>Heap Sort:</strong> Uses a binary heap to sort data. It combines efficiency with in-place sorting but isn’t stable.</li>
+        </ul>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Graph Algorithms</h2>
-        <p>Graph algorithms were another area we explored in detail, each suited to different kinds of problems.</p>
-        <h3>Dijkstra’s Algorithm</h3>
-        <p>Dijkstra’s algorithm finds the shortest path in graphs with non-negative weights. It’s efficient and widely used, but it struggles with negative weights.</p>
-        <h3>Bellman-Ford Algorithm</h3>
-        <p>Bellman-Ford addresses this limitation by handling negative weights, though it’s slower than Dijkstra’s. This trade-off makes it suitable for specific scenarios like financial modeling.</p>
-        <h3>Floyd-Warshall Algorithm</h3>
-        <p>Floyd-Warshall computes shortest paths between all pairs of nodes. Its simplicity and versatility are offset by high memory usage, making it best for smaller graphs.</p>
-        <h3>Prim’s Algorithm</h3>
-        <p>Prim’s algorithm finds minimum spanning trees efficiently, connecting all nodes with the least total edge weight. It’s particularly useful in network design.</p>
-        <p>Each algorithm taught us about the evolution of problem-solving techniques, highlighting how constraints like negative weights or memory usage lead to new solutions.</p>
-    </div>
+        <ul>
+            <li><strong>Dijkstra’s Algorithm:</strong> Finds the shortest path in graphs with non-negative weights. Efficient but struggles with negative weights.</li>
+            <li><strong>Bellman-Ford Algorithm:</strong> Handles negative weights but is slower, suitable for specific scenarios.</li>
+            <li><strong>Floyd-Warshall Algorithm:</strong> Computes shortest paths between all pairs of nodes. Simple but memory-intensive, best for smaller graphs.</li>
+            <li><strong>Prim’s Algorithm:</strong> Finds minimum spanning trees efficiently, useful in network design.</li>
+        </ul>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>What I Learned Overall</h2>
         <p>Overall, I’ve learned that solving problems with algorithms involves making thoughtful trade-offs. We must balance simplicity with efficiency and adapt solutions to meet specific needs. Breaking problems into smaller parts, recognizing patterns, and learning from various contexts have helped me approach challenges effectively. This journey has taught us the importance of planning and adaptability in algorithm design.</p>
-    </div>
+    </section>
 </body>
 </html>
