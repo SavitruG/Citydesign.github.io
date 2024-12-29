@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hashing</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;unordered_map&gt;
+
+using namespace std;
+
+int main() {
+    unordered_map&lt;string, int&gt; hashMap;
+
+    // Inserting elements into the hash map
+    hashMap["Alice"] = 25;
+    hashMap["Bob"] = 30;
+    hashMap["Charlie"] = 35;
+
+    // Accessing values by keys
+    cout &lt;&lt; "Alice's age: " &lt;&lt; hashMap["Alice"] &lt;&lt; endl;
+    cout &lt;&lt; "Bob's age: " &lt;&lt; hashMap["Bob"] &lt;&lt; endl;
+    cout &lt;&lt; "Charlie's age: " &lt;&lt; hashMap["Charlie"] &lt;&lt; endl;
+
+    // Searching for a key
+    if (hashMap.find("David") != hashMap.end()) {
+        cout &lt;&lt; "David's age: " &lt;&lt; hashMap["David"] &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "David not found in the hash map." &lt;&lt; endl;
+    }
+
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
