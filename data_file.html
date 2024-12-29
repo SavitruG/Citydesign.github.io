@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryavarta Infrastructure Management</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #16213e;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+        }
+        section {
+            margin: 20px;
+        }
+        h2 {
+            color: #1c77c3;
+            border-bottom: 2px solid #1c77c3;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #3f4e6b;
+        }
+        th {
+            background-color: #1c77c3;
+            color: #ffffff;
+        }
+        td {
+            background-color: #28334a;
+        }
+        .summary {
+            background-color: #16213e;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Aryavarta Infrastructure Management
+    </header>
+
+    <section>
+        <h2>1. Project Quotations by Cost</h2>
+        <table>
+            <tr>
+                <th>Contractor Name</th>
+                <th>Quotation (in INR)</th>
+            </tr>
+            <tr>
+                <td>Vishal Infra Pvt Ltd</td>
+                <td>12,000,000</td>
+            </tr>
+            <tr>
+                <td>Surya Builders</td>
+                <td>10,000,000</td>
+            </tr>
+            <tr>
+                <td>Arjuna Constructions</td>
+                <td>15,000,000</td>
+            </tr>
+            <tr>
+                <td>Pankaj Associates</td>
+                <td>11,000,000</td>
+            </tr>
+            <tr>
+                <td>Radha Civil Works</td>
+                <td>13,000,000</td>
+            </tr>
+        </table>
+        <p>This table contains quotations from different contractors for an infrastructure project. Each contractor offers a price to complete the construction, with Surya Builders providing the lowest cost at ₹10,000,000.</p>
+    </section>
+
+    <section>
+        <h2>2. Buildings Based on Time to Completion</h2>
+        <table>
+            <tr>
+                <th>Building Name</th>
+                <th>Time to Completion (days)</th>
+            </tr>
+            <tr>
+                <td>Lotus Tower</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Silver Heights</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Sapphire Arena</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Golden Ridge</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Crystal Court</td>
+                <td>110</td>
+            </tr>
+        </table>
+        <p>This table lists the buildings and the number of days required to complete each one. Sapphire Arena is the quickest to finish, taking only 80 days, while Golden Ridge requires the longest time of 150 days.</p>
+    </section>
+
+    <section>
+        <h2>3. Contractors Sorted by Expertise Level</h2>
+        <table>
+            <tr>
+                <th>Contractor Name</th>
+                <th>Expertise Level</th>
+            </tr>
+            <tr>
+                <td>Devendra Builders</td>
+                <td>1 (Low)</td>
+            </tr>
+            <tr>
+                <td>Priya Constructions</td>
+                <td>3 (Medium)</td>
+            </tr>
+            <tr>
+                <td>Kamal Engineers</td>
+                <td>5 (High)</td>
+            </tr>
+            <tr>
+                <td>Rohan Developers</td>
+                <td>2 (Low)</td>
+            </tr>
+            <tr>
+                <td>Nisha Enterprises</td>
+                <td>4 (Medium)</td>
+            </tr>
+        </table>
+        <p>This table categorizes contractors by their expertise level. Kamal Engineers is the most highly skilled, with a level of 5 (High), while Devendra Builders and Rohan Developers have lower expertise levels.</p>
+    </section>
+
+    <section>
+        <h2>4. Distances for Utility Installation</h2>
+        <table>
+            <tr>
+                <th>From Building</th>
+                <th>To Building</th>
+                <th>Distance (meters)</th>
+            </tr>
+            <tr>
+                <td>Arya Mansion</td>
+                <td>Lotus Tower</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Arya Mansion</td>
+                <td>Sapphire Arena</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Arya Mansion</td>
+                <td>Crystal Court</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Lotus Tower</td>
+                <td>Sapphire Arena</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Lotus Tower</td>
+                <td>Crystal Court</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>Sapphire Arena</td>
+                <td>Crystal Court</td>
+                <td>700</td>
+            </tr>
+        </table>
+        <p>This table shows the distances between various buildings in the city of Aryavarta, which will be important for laying down utilities like water pipelines. Arya Mansion is relatively close to Sapphire Arena at 300 meters but farther from Crystal Court at 200 meters.</p>
+    </section>
+
+    <section>
+        <h2>5. Water Pipeline Installation with Minimum Cost</h2>
+        <table>
+            <tr>
+                <th>From Building</th>
+                <th>To Building</th>
+                <th>Cost (INR)</th>
+            </tr>
+            <tr>
+                <td>Arya Mansion</td>
+                <td>Lotus Tower</td>
+                <td>50,000</td>
+            </tr>
+            <tr>
+                <td>Arya Mansion</td>
+                <td>Sapphire Arena</td>
+                <td>30,000</td>
+            </tr>
+            <tr>
+                <td>Arya Mansion</td>
+                <td>Crystal Court</td>
+                <td>40,000</td>
+            </tr>
+            <tr>
+                <td>Lotus Tower</td>
+                <td>Sapphire Arena</td>
+                <td>10,000</td>
+            </tr>
+            <tr>
+                <td>Lotus Tower</td>
+                <td>Crystal Court</td>
+                <td>20,000</td>
+            </tr>
+            <tr>
+                <td>Sapphire Arena</td>
+                <td>Crystal Court</td>
+                <td>15,000</td>
+            </tr>
+        </table>
+        <p>This table presents the costs for connecting different buildings with water pipelines. The cheapest connection is from Lotus Tower to Sapphire Arena at ₹10,000.</p>
+    </section>
+
+    <section>
+        <h2>6. Scheduling Workers for Construction Tasks</h2>
+        <table>
+            <tr>
+                <th>Worker Name</th>
+                <th>Skill Level</th>
+                <th>Task Urgency (1-5)</th>
+            </tr>
+            <tr>
+                <td>Arjun</td>
+                <td>3 (Medium)</td>
+                <td>5 (Very Urgent)</td>
+            </tr>
+            <tr>
+                <td>Mohan</td>
+                <td>1 (Low)</td>
+                <td>3 (Medium)</td>
+            </tr>
+            <tr>
+                <td>Sunita</td>
+                <td>4 (High)</td>
+                <td>2 (Low)</td>
+            </tr>
+            <tr>
+                <td>Priya</td>
+                <td>2 (Low)</td>
+                <td>1 (Very Low)</td>
+            </tr>
+            <tr>
+                <td>Rohit</td>
+                <td>5 (High)</td>
+                <td>4 (High)</td>
+            </tr>
+        </table>
+        <p>This table lists workers, their skill levels, and task urgencies. Rohit, with the highest skill level, is assigned to the most urgent task, while Priya is assigned to the least urgent task.</p>
+    </section>
+
+    <section>
+        <h2>7. Land Use Allocation for City Zoning</h2>
+        <table>
+            <tr>
+                <th>From Land Parcel</th>
+                <th>To Land Parcel</th>
+                <th>Accessibility (meters)</th>
+            </tr>
+            <tr>
+                <td>Arya Park</td>
+                <td>Lotus Valley</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Arya Park</td>
+                <td>Sapphire Gardens</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Lotus Valley</td>
+                <td>Sapphire Gardens</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Lotus Valley</td>
+                <td>Crystal Grove</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>Sapphire Gardens</td>
+                <td>Crystal Grove</td>
+                <td>600</td>
+            </tr>
+        </table>
+        <p>This table shows the accessibility between different land parcels in Aryavarta. Arya Park is easily accessible from Sapphire Gardens at just 300 meters, while Crystal Grove is the least accessible from Lotus Valley at 700 meters.</p>
+    </section>
+
+    <section>
+        <h2>8. Budget Allocation for Infrastructure Projects</h2>
+        <table>
+            <tr>
+                <th>Project Name</th>
+                <th>Estimated Cost (INR)</th>
+            </tr>
+            <tr>
+                <td>Central Park</td>
+                <td>40,00,000</td>
+            </tr>
+            <tr>
+                <td>Solar Plant</td>
+                <td>20,00,000</td>
+            </tr>
+            <tr>
+                <td>Community Centre</td>
+                <td>30,00,000</td>
+            </tr>
+            <tr>
+                <td>Road Expansion</td>
+                <td>10,00,000</td>
+            </tr>
+        </table>
+        <p>This table shows the estimated costs for various infrastructure projects in Aryavarta. Central Park is the most expensive, requiring ₹40,00,000, while the Road Expansion project is the least expensive at ₹10,00,000.</p>
+    </section>
+
+    <section>
+        <h2>9. Waste Collection Routes</h2>
+        <table>
+            <tr>
+                <th>From Location</th>
+                <th>To Location</th>
+                <th>Distance (km)</th>
+            </tr>
+            <tr>
+                <td>Central Station</td>
+                <td>Riverbank</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Central Station</td>
+                <td>Market Square</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Riverbank</td>
+                <td>Market Square</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Riverbank</td>
+                <td>Park Avenue</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Market Square</td>
+                <td>Park Avenue</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <p>This table shows the routes for waste collection in Aryavarta, with distances in kilometers. The shortest route is from Market Square to Park Avenue, at just 2 km.</p>
+    </section>
+
+    <section>
+        <h2>10. Flood Risks and Infrastructure Impact</h2>
+        <table>
+            <tr>
+                <th>Area</th>
+                <th>Flood Risk (1-5)</th>
+                <th>Infrastructure Impact (1-5)</th>
+            </tr>
+            <tr>
+                <td>North District</td>
+                <td>5 (High)</td>
+                <td>3 (Medium)</td>
+            </tr>
+            <tr>
+                <td>South District</td>
+                <td>4 (High)</td>
+                <td>2 (Low)</td>
+            </tr>
+            <tr>
+                <td>East District</td>
+                <td>3 (Medium)</td>
+                <td>4 (High)</td>
+            </tr>
+            <tr>
+                <td>West District</td>
+                <td>2 (Low)</td>
+                <td>5 (Very High)</td>
+            </tr>
+        </table>
+        <p>This table evaluates flood risks and infrastructure impacts in different districts of Aryavarta. The North District is highly at risk for flooding (5), and the West District has the highest infrastructure impact (5).</p>
+    </section>
+
+    <div class="summary">
+        <h2>Summary</h2>
+        <p>In Aryavarta, a comprehensive infrastructure and project management system is necessary to optimize resources, prioritize tasks, and ensure efficient development. The provided data covers various aspects of city planning, including cost-effective project selection, construction timelines, contractor expertise, utility management, and land zoning. The city’s infrastructure requires careful budgeting, waste management, and flood risk mitigation to ensure its sustainability and growth. By employing optimized algorithms for sorting, searching, and route planning, Aryavarta can address both immediate needs and future challenges while promoting innovation and resilience in its urban development.</p>
+    </div>
+</body>
+</html>
