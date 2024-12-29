@@ -1,170 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Course Project</title>
     <style>
-      /* General Styles */
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f6f9;
-        color: #333;
-        line-height: 1.8;
-      }
-      header {
-        background: linear-gradient(135deg, #004080, #0066cc);
-        color: #fff;
-        text-align: center;
-        padding: 30px 10px;
-      }
-      header h1 {
-        margin: 0;
-        font-size: 2.5em;
-      }
-      header p {
-        font-size: 1em;
-        margin-top: 5px;
-      }
-      .container {
-        margin: 20px auto;
-        padding: 30px;
-        max-width: 100%;
-      }
-      section {
-        margin: 20px auto;
-        padding: 30px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-      h2 {
-        font-size: 1.8em;
-        margin-bottom: 15px;
-        color: #004080;
-        border-bottom: 2px solid #e6f7ff;
-        padding-bottom: 5px;
-      }
-      p {
-        font-size: 1em;
-        margin-bottom: 15px;
-      }
-      ul {
-        margin: 15px 0;
-        padding-left: 20px;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      strong {
-        color: #004080;
-      }
-      /* Button Styling */
-      .links a {
-        display: inline-block;
-        margin: 5px 10px;
-        padding: 8px 15px;
-        background: linear-gradient(135deg, #004080, #0066cc);
-        color: white;
-        font-size: 1em;
-        font-weight: bold;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-      }
-      .links a:hover {
-        background: linear-gradient(135deg, #003366, #005bb5);
-      }
-      .city-description img {
-        margin-top: 15px;
-        max-width: 30%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .city-details {
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
-      .city-details div {
-        background: #e6f7ff;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .city-details h4 {
-        margin: 0 0 10px;
-        font-size: 1.2em;
-        color: #003366;
-      }
-      /* Responsive Design */
-      @media (max-width: 768px) {
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        header {
+            background: linear-gradient(135deg, #004080, #0066cc);
+            color: #fff;
+            text-align: center;
+            padding: 30px 10px;
+        }
         header h1 {
-          font-size: 2em;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1em;
+            margin-top: 5px;
         }
         .container {
-          padding: 20px;
+            margin: 20px auto;
+            padding: 30px;
+            max-width: 100%;
         }
         section {
-          padding: 20px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #004080;
+            border-bottom: 2px solid #e6f7ff;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #004080;
+        }
+        /* Button Styling */
         .links a {
-          font-size: 0.9em;
-          padding: 6px 12px;
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 8px 15px;
+            background: linear-gradient(135deg, #004080, #0066cc);
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
         }
-      }
+        .links a:hover {
+            background: linear-gradient(135deg, #003366, #005bb5);
+        }
+        .city-description img {
+            margin-top: 15px;
+            max-width: 50%; /* Reduced max-width for smaller size */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* Centered image */
+        }
+        .city-details {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .city-details div {
+            background: #e6f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .city-details h4 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            color: #003366;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .container {
+                padding: 20px;
+            }
+            section {
+                padding: 20px;
+            }
+            .links a {
+                font-size: 0.9em;
+                padding: 6px 12px;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1>Course Project</h1>
-      <p>Explore the members and contributions of our project team.</p>
+        <h1>Course Project</h1>
+        <p>Explore the members and contributions of our project team.</p>
     </header>
 
     <div class="container">
-      <!-- City Design Overview Section -->
-      <section class="city-description">
-        <h2>City Design Overview</h2>
-        <p>We were given the task of designing a smart city spanning 1500 sq km, with a focus on being realistic, practical, and future-ready.</p>
-        <p>Our journey began with a thorough analysis of the geography, weather conditions, and geological aspects of the area. This helped us create a city layout that aligns with natural resources and supports efficient urban living.</p>
-        <p>Aryavarta is built on the pillars of sustainability, innovation, and growth. Every aspect, from infrastructure to resource management, was designed thoughtfully to meet these goals.</p>
-      </section>
+        <section class="city-description">
+            <h2>City Design Overview</h2>
+            <p>We were given the task of designing a smart city spanning 1500 sq km, with a focus on being realistic, practical, and future-ready.</p>
+            <p>Our journey began with a thorough analysis of the geography, weather conditions, and geological aspects of the area. This helped us create a city layout that aligns with natural resources and supports efficient urban living.</p>
+            <p>Aryavarta is built on the pillars of sustainability, innovation, and growth. Every aspect, from infrastructure to resource management, was designed thoughtfully to meet these goals.</p>
+        </section>
 
-      <section>
-        <h2>Aryavarta</h2>
-        <p><strong>Aryavarta</strong> is a visionary smart city spanning <strong>1500 sq km</strong>, designed for sustainability, efficiency, and innovation. The city integrates technology, green infrastructure, and strategic urban planning for a balanced ecosystem.</p>
-        <div class="city-details">
-          <div>
-            <h4>Basic Information</h4>
-            <p><strong>Time Zone:</strong> UTC +5:30 (IST)</p>
-            <p><strong>PINCODE:</strong> 690001</p>
-            <p><strong>STD Code:</strong> 084</p>
-            <p><strong>Population:</strong> 1.5 crore</p>
-          </div>
-          <div>
-            <h4>Natural Features</h4>
-            <p><strong>Elevation:</strong> 950m above sea level</p>
-            <p><strong>Groundwater Level:</strong> 16-100 ft</p>
-            <p><strong>Water Source:</strong> Kaveri River channels</p>
-          </div>
-          <div>
-            <h4>Climate</h4>
-            <p><strong>Type:</strong> Tropical Savannah</p>
-            <p><strong>Temperature Range:</strong> 15°C - 25°C</p>
-            <p><strong>Monsoon:</strong> 800mm rainfall</p>
-          </div>
-        </div>
-        <img src="citysketch.jpeg" alt="Illustration of the city design">
-      </section>
-        <!-- Team Section -->
+        <section>
+            <h2>Aryavarta</h2>
+            <p><strong>Aryavarta</strong> is a visionary smart city spanning <strong>1500 sq km</strong>, designed for sustainability, efficiency, and innovation. The city integrates technology, green infrastructure, and strategic urban planning for a balanced ecosystem.</p>
+            <div class="city-details">
+                <div>
+                    <h4>Basic Information</h4>
+                    <p><strong>Time Zone:</strong> UTC +5:30 (IST)</p>
+                    <p><strong>PINCODE:</strong> 690001</p>
+                    <p><strong>STD Code:</strong> 084</p>
+                    <p><strong>Population:</strong> 1.5 crore</p>
+                </div>
+                <div>
+                    <h4>Natural Features</h4>
+                    <p><strong>Elevation:</strong> 950m above sea level</p>
+                    <p><strong>Groundwater Level:</strong> 16-100 ft</p>
+                    <p><strong>Water Source:</strong> Kaveri River channels</p>
+                </div>
+                <div>
+                    <h4>Climate</h4>
+                    <p><strong>Type:</strong> Tropical Savannah</p>
+                    <p><strong>Temperature Range:</strong> 15°C - 25°C</p>
+                    <p><strong>Monsoon:</strong> 800mm rainfall</p>
+                </div>
+            </div>
+            <img src="citysketch.jpeg" alt="Illustration of the city design"> 
+        </section>
         <section>
             <h2>Our Team</h2>
-          <p>Explore the members and contributions of our project team.</p>
+            <p>Explore the members and contributions of our project team.</p>
             <div class="member-container">
                 <div class="member-section">
                     <p><strong>Abhinandan N M</strong></p>
@@ -197,5 +195,5 @@
             </div>
         </section>
     </div>
-  </body>
+</body>
 </html>
