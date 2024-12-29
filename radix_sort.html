@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radix Sort in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Radix Sort in C++</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+void countSort(vector&lt;int&gt;&amp; arr, int exp) {
+    int n = arr.size();
+    vector&lt;int&gt; output(n);
+    vector&lt;int&gt; count(10, 0);
+
+    for (int i = 0; i &lt; n; i++) {
+        count[(arr[i] / exp) % 10]++;
+    }
+    
+    for (int i = 1; i &lt; 10; i++) {
+        count[i] += count[i - 1];
+    }
+    
+    for (int i = n - 1; i &gt;= 0; i--) {
+        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+        count[(arr[i] / exp) % 10]--;
+    }
+
+    for (int i = 0; i &lt; n; i++) {
+        arr[i] = output[i];
+    }
+}
+
+void radixSort(vector&lt;int&gt;&amp; arr) {
+    int maxElem = *max_element(arr.begin(), arr.end());
+
+    for (int exp = 1; maxElem / exp &gt; 0; exp *= 10) {
+        countSort(arr, exp);
+    }
+}
+
+int main() {
+    vector&lt;int&gt; arr = {170, 45, 75, 90, 802, 24, 2, 66};
+    
+    cout &lt;&lt; "Original array: &lt;br&gt;";
+    for (int num : arr) {
+        cout &lt;&lt; num &lt;&lt; " ";
+    }
+    cout &lt;&lt; "&lt;br&gt;&lt;br&gt;";
+    
+    radixSort(arr);
+    
+    cout &lt;&lt; "Sorted array: &lt;br&gt;";
+    for (int num : arr) {
+        cout &lt;&lt; num &lt;&lt; " ";
+    }
+    
+    return 0;
+}
+    </pre>
+
+</body>
+</html>
